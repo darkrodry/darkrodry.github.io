@@ -12,7 +12,6 @@ TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = 'es'
 
-THEME='pelican-hyde'
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -35,3 +34,11 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+STATIC_PATHS = ['images', 'extra/CNAME']
+
+# Theme stuff
+THEME = "pelican-hyde"
+
+BIO = "Desarrollador backend, aprendiz de Scala, escritor novato"
+PROFILE_IMAGE = "avatar.jpg"
