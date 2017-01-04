@@ -3,13 +3,16 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'DarkRodry'
-SITENAME = "DarkRodry's Blog"
-SITEURL = ''
+SITENAME = 'DarkRodry\'s Blog'
+SITEURL = 'https://darkrodry.github.io/'
+SITETITLE = 'Rodrigo de Frutos'
+SITESUBTITLE = 'Backend Developer'
+SITEDESCRIPTION = 'aprendiz de scala-escritor novato'
 
 PATH = 'content'
 
+# Locale config
 TIMEZONE = 'Europe/Paris'
-
 DEFAULT_LANG = 'es'
 
 # Feed generation is usually not desired when developing
