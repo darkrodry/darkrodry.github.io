@@ -19,12 +19,6 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-
 # Social widget
 SOCIAL = (('twitter', 'https://twitter.com/DarkRodry'),
 	('linkedin', 'https://es.linkedin.com/in/rodrigodefrutos'),
@@ -38,7 +32,7 @@ DEFAULT_PAGINATION = 10
 STATIC_PATHS = ['images', 'extra/CNAME']
 
 # Theme stuff
-THEME = "pelican-hyde"
+THEME = "theme-flex"
 
 BIO = "Desarrollador backend, aprendiz de Scala, escritor novato"
-PROFILE_IMAGE = "avatar.jpg"
+SITELOGO = "/images/avatar.jpg"
