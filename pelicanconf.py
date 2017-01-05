@@ -7,9 +7,15 @@ SITENAME = 'DarkRodry\'s Blog'
 SITEURL = 'https://darkrodry.github.io/'
 SITETITLE = 'Rodrigo de Frutos'
 SITESUBTITLE = 'Backend Developer'
+SITELOGO = "/images/avatar.jpg"
 SITEDESCRIPTION = 'aprendiz de scala-escritor novato'
 
+BROWSER_COLOR = '#333'
+
 PATH = 'content'
+
+# Theme stuff
+THEME = "theme-flex"
 
 # Locale config
 TIMEZONE = 'Europe/Paris'
@@ -22,10 +28,16 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Main menu config
+MAIN_MENU = True
+
+MENUITEMS = (('Archivo', '/archives.html'),
+             ('Categorias', '/categories.html'))
+
 # Social widget
-SOCIAL = (('twitter', 'https://twitter.com/DarkRodry'),
-	('linkedin', 'https://es.linkedin.com/in/rodrigodefrutos'),
-	('github', 'https://github.com/darkrodry'))
+SOCIAL = (('linkedin', 'https://es.linkedin.com/in/rodrigodefrutos'),
+	('github', 'https://github.com/darkrodry'),
+	('twitter', 'https://twitter.com/DarkRodry'))
 
 DEFAULT_PAGINATION = 10
 
@@ -34,8 +46,5 @@ DEFAULT_PAGINATION = 10
 
 STATIC_PATHS = ['images', 'extra/CNAME']
 
-# Theme stuff
-THEME = "theme-flex"
-
-BIO = "Desarrollador backend, aprendiz de Scala, escritor novato"
-SITELOGO = "/images/avatar.jpg"
+# Pigment config
+PYGMENTS_STYLE = 'native'
