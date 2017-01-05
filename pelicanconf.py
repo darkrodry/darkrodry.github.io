@@ -20,6 +20,7 @@ THEME = "theme-flex"
 # Locale config
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'es'
+OG_LOCALE = 'es_ES'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -44,7 +45,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-STATIC_PATHS = ['images', 'extra/CNAME']
+STATIC_PATHS = ['images', 'extra']
 
 # Pigment config
 PYGMENTS_STYLE = 'native'
