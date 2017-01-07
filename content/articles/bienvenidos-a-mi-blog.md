@@ -1,6 +1,6 @@
 Title: ¡Bienvenidos a mi blog!
-Date: 2017-01-05 
-Category: offtopic
+Date: 2017-01-05
+Category: Offtopic
 Tags: offtopic
 Slug: bienvenidos-a-mi-blog
 Summary: Durante las próximas semanas espero empezar a llenar de contenido este blog, con artículos sobre aventuras y desventuras con nuevos proyectos y tecnologías. ¡Disfrutad!
@@ -11,4 +11,4 @@ Después de mucho tiempo debatiendo proyectos con mi buen amigo [JesusMtnez](htt
 
 Durante las próximas semanas espero empezar a llenar de contenido este blog, con artículos sobre aventuras y desventuras con nuevos proyectos y tecnologías. ¡Disfrutad!
 
-![Bienvenidos](images/excited-finn.gif)
+<img style="display: block; margin-left: auto; margin-right: auto" src="images/excited-finn.gif">
