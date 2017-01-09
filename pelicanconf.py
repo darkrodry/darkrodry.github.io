@@ -17,10 +17,17 @@ PATH = 'content'
 # Theme stuff
 THEME = "theme-flex"
 
+# Plugins config
+JINJA_EXTENSIONS = ['jinja2.ext.i18n']
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['i18n_subsites']
+
 # Locale config
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Europe/Madrid'
 DEFAULT_LANG = 'es'
 OG_LOCALE = 'es_ES'
+I18N_TEMPLATES_LANG = 'en'
+LOCALE = 'es_ES.UTF-8'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
