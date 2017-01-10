@@ -3,12 +3,12 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'DarkRodry'
-SITENAME = 'DarkRodry\'s Blog'
+SITENAME = 'El blog de DarkRodry'
 SITEURL = 'http://localhost:8000'
 SITETITLE = 'Rodrigo de Frutos'
 SITESUBTITLE = 'Backend Developer'
 SITELOGO = "/images/avatar.jpg"
-SITEDESCRIPTION = 'aprendiz de scala-escritor novato'
+SITEDESCRIPTION = 'Aventuras y desventuras de un programador'
 
 BROWSER_COLOR = '#333'
 
