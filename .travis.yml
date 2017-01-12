@@ -1,11 +1,17 @@
 language: python
+python:
+  - "3.5"
 branches:
   only:
   - source
+before_install:
+  - sudo apt-get update && sudo apt-get --reinstall install -qq language-pack-es
 install:
   - pip install -r requirements.txt
 script:
   - make publish github
 env:
   global:
+  - LANG=es_ES.UTF-8
+  - LC_ALL=es_ES.UTF-8
   - secure: quwR54aw1nanmg8ohn4V2OecqHnj+XLkcL5ECc+2FhOYoPSV3EIMYfkXZUKFk9yef/36E98qf0MtzElf0HRDCXl+oXaI9WhqoTqGPCoNvIsmyh3JOHB6VZV65hCuWqiZ6tmLLwWCMXP8pgw6QQiDW8rZ3NIgwdzpDCu9MNOcFHh/fv3Oz4y+HN972FYzj2SgC00NkdFAj9ElzbWDU4f+2ABAlRlYZM9l6C/JsA+JwJ81Qp0dqzzhTkit7coOoUHWmrqubdVxJ94Sb6PKYFeUe9H9T7NCE2gGGNHwNNyQ4BQbDugdsLZPjPyUrdFf5uqCp0ca76tn3w4xAPKQLYMFxzGIzzcMZyQVLAOplttIhso6bP6AQjf66S/d5sv0tDKjXnwJen4hE62Y1VJ4twqkiWvfr8+mmXC/NubO16QrJpMh+T49gqSI1MOpuF1T9c6aAZQtTY89ZC1PxHkhUXnZ8h08tZ9T/GzexUkoyDOe2jL7mDjl0V8qoRN9foeVTCJwFJRSjZ0qyoiFXI9n0TrGq+LnYAuVzbFBSkW7SF/KdQaRrJ+lKGiiJ4Rzo5TyxHBeUNRoRf/fUsROhTCe/c9rzqwiAqpn1YZ1LxwqXWlEIMvXUrElIZCOVQzifb6mpt1DfC+GUbHc8cHJe7EDDd+DEAMakG+SM3kqVSF9TUa6FBs=
