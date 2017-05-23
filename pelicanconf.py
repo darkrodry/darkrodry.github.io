@@ -60,4 +60,4 @@ DEFAULT_PAGINATION = 10
 STATIC_PATHS = ['images', 'extra']
 
 # Pigment config
-PYGMENTS_STYLE = 'native'
+PYGMENTS_STYLE = 'monokai'
