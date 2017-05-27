@@ -6,7 +6,7 @@ AUTHOR = 'DarkRodry'
 SITENAME = 'El blog de DarkRodry'
 SITEURL = 'http://localhost:8000'
 SITETITLE = 'Rodrigo de Frutos'
-SITESUBTITLE = 'Backend Developer'
+SITESUBTITLE = 'Fullstack (Backend) Developer'
 SITELOGO = "/images/avatar.jpg"
 SITEDESCRIPTION = 'Aventuras y desventuras de un programador'
 
