@@ -47,6 +47,8 @@ AUTHOR_FEED_RSS = None
 # Main menu config
 MAIN_MENU = True
 
+DISABLE_URL_HASH = True
+
 MENUITEMS = (('Archivo', '/archives.html'),
              ('Categorias', '/categories.html'))
 
