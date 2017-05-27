@@ -34,6 +34,9 @@ DATE_FORMATS = {
     'es': '%d de %B de %Y'
 }
 
+# Integrations
+DISQUS_SITENAME = 'darkrodry-github-blog'
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
