@@ -18,7 +18,5 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-# Following items are often useful when publishing
-
-#DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+# Integrations
+GOOGLE_ANALYTICS = "UA-100015471-1"
