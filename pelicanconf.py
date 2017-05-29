@@ -62,7 +62,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-STATIC_PATHS = ['images', 'extra']
+STATIC_PATHS = ['images', 'extra', 'slides']
 
 # Pigment config
 PYGMENTS_STYLE = 'monokai'
