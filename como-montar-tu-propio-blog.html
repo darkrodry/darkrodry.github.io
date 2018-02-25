@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/pygments/monokai.min.css">
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://darkrodry.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="El blog de DarkRodry Atom">
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100015471-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+<meta name="author" content="DarkRodry" />
+<meta name="description" content="Después de mucho tiempo queriendo escribir algún artículo, finalmente me he decidido empezar por algo sencillo: un pequeño tutorial contando el proceso de creación del blog y su puesta a punto para publicar automáticamente los cambios realizados." />
+<meta name="keywords" content="tech, blog, pelican, travis, tutorial, CI, github, github pages">
+
+<meta property="og:site_name" content="El blog de DarkRodry"/>
+<meta property="og:title" content="Cómo montar tu propio blog"/>
+<meta property="og:description" content="Después de mucho tiempo queriendo escribir algún artículo, finalmente me he decidido empezar por algo sencillo: un pequeño tutorial contando el proceso de creación del blog y su puesta a punto para publicar automáticamente los cambios realizados."/>
+<meta property="og:locale" content="es_ES"/>
+<meta property="og:url" content="https://darkrodry.github.io/como-montar-tu-propio-blog.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-05-23 00:00:00+02:00"/>
+<meta property="article:modified_time" content="2018-02-25 00:00:00+01:00"/>
+<meta property="article:author" content="https://darkrodry.github.io/author/darkrodry.html">
+<meta property="article:section" content="Tutoriales"/>
+<meta property="article:tag" content="tech"/>
+<meta property="article:tag" content="blog"/>
+<meta property="article:tag" content="pelican"/>
+<meta property="article:tag" content="travis"/>
+<meta property="article:tag" content="tutorial"/>
+<meta property="article:tag" content="CI"/>
+<meta property="article:tag" content="github"/>
+<meta property="article:tag" content="github pages"/>
+<meta property="og:image" content="/images/avatar.jpg">
+
+  <title>El blog de DarkRodry &ndash; Cómo montar tu propio blog</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://darkrodry.github.io">
+        <img src="/images/avatar.jpg" alt="Rodrigo de Frutos" title="Rodrigo de Frutos">
+      </a>
+      <h1><a href="https://darkrodry.github.io">Rodrigo de Frutos</a></h1>
+
+<p>Fullstack (Backend) Developer</p>
+      <nav>
+        <ul class="list">
+          <li><a href="https://darkrodry.github.io/pages/charlas.html">Charlas</a></li>
+          <li><a href="https://darkrodry.github.io/pages/sobre-mi.html">Sobre mí</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-linkedin" href="https://es.linkedin.com/in/rodrigodefrutos" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/darkrodry" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/DarkRodry" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://darkrodry.github.io">Inicio</a>
+
+      <a href="/archives.html">Archivo</a>
+      <a href="/categories.html">Categorias</a>
+
+      <a href="https://darkrodry.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="como-montar-tu-propio-blog">Cómo montar tu propio blog</h1>
+    <p>
+      Publicado el 23 de mayo de 2017 en <a href="https://darkrodry.github.io/category/tutoriales.html">Tutoriales</a>
+
+        &#8226; 7 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>Después de mucho tiempo queriendo escribir algún artículo, finalmente me he decidido empezar por algo sencillo: un pequeño tutorial contando el proceso de creación del blog y su puesta a punto para publicar automáticamente los cambios que realizados. Como ya mencioné anteriormente, este blog está montado usando <a href="https://pages.github.com/">GitHub Pages</a>, <a href="http://docs.getpelican.com/en/stable/">Pelican</a> con <a href="https://github.com/alexandrevicenzi/Flex">Flex-Theme</a> y <a href="https://travis-ci.org/">Travis CI</a>.</p>
+<p>A lo largo de este (largo) artículo explicaré como he utilizado todas estas herramientas para crear y automatizar todo el funcionamiento del blog.</p>
+<h2>Preparando el repositorio</h2>
+<p>El primer paso para montar el blog es crear un repositorio en el que subir el código. En mi blog he utilizado un repositorio de GitHub, ya que en combinación con GitHub Pages permite mostrar código HTML sin necesidad de montar nada más. Otros populares repositorios, como Gitlab o Bitbucket tienen soluciones similares, aunque hay pasos en el tutorial que pueden variar.</p>
+<p>Para crear el repositorio, el único requisito es que su nombre siga el patrón <em>username.github.io</em>, donde <em>username</em> será tu nombre de usuario de Github (en mi caso, <em>darkrodry.github.io</em>). En este repositorio, todo el contenido de la rama <em>master</em> será lo que se muestre en el blog. Yo he creado además otra rama llamada <em>source</em> para subir el código utilizado para generar el blog.</p>
+<p>También os recomiendo darle un vistazo al funcionamiento de <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a>, ya que lo utilizaremos más adelante para agregar algunas dependencias necesarias para la compilación.</p>
+<h2>Iniciando Pelican</h2>
+<p>Como indican en su <a href="http://docs.getpelican.com/en/stable/">web</a>, Pelican es una herramienta escrita en Python que permite generar sitios web estáticos a partir de una serie de ficheros <a href="https://es.wikipedia.org/wiki/Markdown">Markdown</a> o <a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>.</p>
+<p>Para instalar Pelican en tu ordenador necesitas tener Python. Recomiendo usar la versión 3.5 o superior, ya que tuve algún problema usando la 2.7 (si queréis mantener ambas versiones probad <a href="https://github.com/pyenv/pyenv">pyenv</a>). Pelican se encuentra dentro de <em>pip</em>, por lo que instalarlo es tan sencillo como ejecutar en tu terminal:</p>
+<div class="highlight"><pre><span></span>pip install pelican
+</pre></div>
+
+
+<p>Pelican proporciona un simple quickstart para generar el esqueleto del proyecto, así como los ficheros de configuración y un Makefile para ejecutar el mismo. Para ejecutar este quickstart (dentro de la rama elegida para subir el código al repositorio) escribe en tu terminal el siguiente comando y responde a las preguntas:</p>
+<div class="highlight"><pre><span></span>pelican-quickstart
+</pre></div>
+
+
+<p>En mi blog he usado en gran parte la configuración por defecto, a excepción de:</p>
+<ul>
+<li>nombre y autor del blog</li>
+<li>url: usad la que os debería haber generado GitHub</li>
+<li>cuando pregunte si queréis publicar vuestra web en GitHub Pages responded que sí, y confirmad la url.</li>
+</ul>
+<p>No os preocupéis si configuráis algo mal, está configuración se puede modificar más adelante sin ningún problema.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto" src="images/pelican-quickstart-demo.png"></p>
+<p>Una vez finalizado el quickstart, podrás observar que se han generado una serie de ficheros y carpetas. Los más importantes son:</p>
+<ul>
+<li><em>content/</em>: en este directorio va todo el contenido del blog (artículos, imágenes...)</li>
+<li><em>output/</em>: aquí se almacena el contenido autogenerado al usar Pelican. Es muy recomendable agregar este fichero a nuestro .gitignore</li>
+<li><em>pelicanconf.py</em>: fichero de configuración principal con parámetros comunes y de despliegue local</li>
+<li><em>publishconf.py</em>: fichero que sobreescribe parte de la configuración de <em>pelicanconf.py</em> con los parámetros necesarios a la hora de publicar</li>
+</ul>
+<p>Antes de continuar, puedes comprobar que todo se ha generado correctamente con el siguiente comando:</p>
+<div class="highlight"><pre><span></span>make html <span class="o">&amp;&amp;</span> make serve
+</pre></div>
+
+
+<p>Una vez se haya generado el html y se levante el servidor, carga la url <a href="http://localhost:8000/">http://localhost:8000/</a> en tu navegador para ver tus avances.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto" src="images/pelican-first-execution.png"></p>
+<h2>Creando el primer post</h2>
+<p>Una vez llegados a este punto, es el momento de empezar a agregar contenido al blog. Pelican interpreta que cualquier fichero dentro del directorio <em>content/</em> es un artículo del blog, y los utilizará para generar el contenido del mismo. Hay una excepción a esto, ya que si creamos una carpeta <em>content/pages/</em> considerará el contenido de la misma como contenido estático del sitio, como puede ser las páginas con información sobre el autor, contacto o proyectos personales.</p>
+<p>Para crear contenido en el blog, puedes utilizar dos formatos: <a href="https://es.wikipedia.org/wiki/Markdown">Markdown</a> o <a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>. En mi caso he decidido utilizar Markdown ya que estoy más familiarizado con ello y lo uso con algo de frecuencia.</p>
+<p>Crear un artículo es tan sencillo como agregar un fichero a la carpeta <em>content/</em> y escribir dentro lo que quieras contar. Para que este artículo sea considerado como tal, hay que agregar antes un pequeño apartado con información sobre el mismo. El resultado de tu artículo</p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">Título</span> <span class="n">del</span> <span class="n">post</span> <span class="o">(</span><span class="n">obligatorio</span><span class="o">)</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2017</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">21</span> <span class="mi">10</span><span class="o">:</span><span class="mi">20</span> <span class="o">(</span><span class="n">obligatorio</span><span class="o">)</span>
+<span class="n">Modified</span><span class="o">:</span> <span class="mi">2017</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">22</span> <span class="mi">19</span><span class="o">:</span><span class="mi">30</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">Artículo</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">tutorial</span><span class="o">,</span> <span class="n">blog</span><span class="o">,</span> <span class="n">pelican</span>
+<span class="n">Slug</span><span class="o">:</span> <span class="n">articulo</span><span class="o">-</span><span class="n">de</span><span class="o">-</span><span class="n">ejemplo</span>
+<span class="n">Authors</span><span class="o">:</span> <span class="n">Rodrigo</span> <span class="n">de</span> <span class="n">Frutos</span>
+<span class="n">Summary</span><span class="o">:</span> <span class="n">Resumen</span> <span class="n">sobre</span> <span class="n">el</span> <span class="n">contenido</span> <span class="n">del</span> <span class="n">post</span>
+
+<span class="n">A</span> <span class="n">partir</span> <span class="n">de</span> <span class="n">aquí</span><span class="o">,</span> <span class="n">el</span> <span class="n">contenido</span> <span class="n">de</span> <span class="n">tu</span> <span class="n">nuevo</span> <span class="n">artículo</span> <span class="n">usando</span> <span class="o">*</span><span class="n">Markdown</span><span class="o">*.</span>
+</pre></div>
+
+
+<p>Una vez creado el artículo, prueba a generar de nuevo el blog y comprueba el resultado.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto" src="images/pelican-first-post.png"></p>
+<p>Puedes ver más información sobre cómo crear artículos en <a href="http://docs.getpelican.com/en/stable/content.html#file-metadata">la documentación de Pelican</a>.</p>
+<h2>Personalizando el blog</h2>
+<p>A estas alturas puede ser que estés empezando a dudar del estilo ofrecido por tu blog. Otro de los puntos fuertes de Pelican es que permite cambiar el tema del blog, poniendo a disposición de los usuarios un <a href="http://www.pelicanthemes.com/">gran catálogo de temas</a>, además de permitir <a href="http://docs.getpelican.com/en/stable/themes.html">crear nuestros propios temas</a>. Para mi blog, decidí empezar con la opción sencilla y utilizar un tema ya existente, eligiendo finalmente <a href="https://github.com/alexandrevicenzi/Flex">Flex</a>.</p>
+<p>Para agregar este tema (o cualquier otro) al blog, hay que hacer dos pequeños cambios. Lo primero es descargar el código del tema. Yo he decidido importar el tema usando <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a> con el siguiente comando:</p>
+<div class="highlight"><pre><span></span>git submodule add https://github.com/alexandrevicenzi/Flex.git theme-flex
+</pre></div>
+
+
+<p>Una vez tenemos el tema en nuestro repositorio, para que el tema se aplique en el blog hay que modificar el fichero de configuración. Abre el fichero <em>pelicanconf.py</em> y añade la siguiente línea (o modifícala en caso de que ya exista): <code>THEME = "theme-flex"</code>.</p>
+<p>Pero esta personalización no acaba aquí. Al abrir el fichero de configuración habrás podido observar que hay otros campos que, o están vacíos o te indican que insertes tu información. Tanto Pelican como el tema que hayas elegido te permitirán personalizar mucha información que mostrará en el blog, como puede ser tu nombre, una biografía, tus redes sociales o agregar Google Analytics. En el caso de Flex, puedes consultar la sección de <a href="https://github.com/alexandrevicenzi/Flex/wiki/Custom-Settings">custom settings</a> de su Wiki.</p>
+<p>Para terminar, posiblemente quieras tener una bio un poco más extensa que la que te permite el tema (es muy breve, al estilo Twitter). Pelican interpreta que cualquier fichero dentro de <em>content/pages</em> es una página estática, sin formato artículo, a tu blog. Todos los ficheros que agregues en este directorio crearán una nueva entrada en el menú de tu blog.</p>
+<h2>Actualización automática</h2>
+<p>La última tarea para dejar tu blog listo es delegar la tarea de la generación del mismo usando integración continua. Para esta tarea he elegido utilizar <a href="https://travis-ci.org/">Travis CI</a>, ya que es un servicio de integración gratuito y muy extendido (y que tenía ganas de probar, la verdad).</p>
+<p>El primer paso de todos es crearte una cuenta en Travis CI asignada a tu usuario de GitHub. Para habilitar Travis CI en nuestro proyecto hay que agregar un fichero <em>.travis.yml</em> en tu repositorio con el siguiente contenido:</p>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">language</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="l l-Scalar l-Scalar-Plain">python</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;3.5&quot;</span>
+<span class="l l-Scalar l-Scalar-Plain">branches</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">only</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">[</span><span class="nv">rama con el código</span><span class="p p-Indicator">,</span> <span class="nv">source en mi caso</span><span class="p p-Indicator">]</span>
+<span class="l l-Scalar l-Scalar-Plain">before_install</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">sudo apt-get update &amp;&amp; sudo apt-get --reinstall install -qq language-pack-es</span>
+<span class="l l-Scalar l-Scalar-Plain">install</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
+<span class="l l-Scalar l-Scalar-Plain">script</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">make publish github</span>
+<span class="l l-Scalar l-Scalar-Plain">env</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">global</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">LANG=es_ES.UTF-8</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">LC_ALL=es_ES.UTF-8</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">secure</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">Token de Travis Encriptado</span><span class="p p-Indicator">]</span>
+</pre></div>
+
+
+<p>Como podrás observar, este fichero tiene un campo <code>secure:</code> con un token. ¿De dónde sale este token? Es el encargado de permitir a Travis subir a la rama master el resultado de la generación del blog. Este token se puede generar en la sección de ajustes de tu cuenta de GitHub, en la sección de <a href="https://github.com/settings/tokens">personal access tokens</a>. Crea tu nuevo token poniéndole un nombre representativo y con permisos completos para acceder a repositorios privados.</p>
+<p>Para dar seguridad a este token, la gente de Travis CI tiene un cliente en Ruby con diferentes herramientas, y entre ellas una para cifrar estas claves. Para instalar estas herramientas necesitaremos tener Ruby en nuestro ordenador e instalar una nueva gema:</p>
+<div class="highlight"><pre><span></span>gem install travis
+</pre></div>
+
+
+<p>Una vez instalada, ejecuta el siguiente comando en la raíz de tu repositorio para agregar el token a tu fichero <em>.travis.yml</em>:</p>
+<div class="highlight"><pre><span></span>travis encrypt <span class="nv">GH_TOKEN</span><span class="o">=</span>&lt;token en bruto&gt; --add --override
+</pre></div>
+
+
+<p>Para hacer la subida del blog a GitHub utilizaremos <a href="https://github.com/davisp/ghp-import">ghp-import</a>, ya que nos facilita bastante la tarea. Para instalarlo simplemente hacemos uso de pip y ejecutamos <code>pip install ghp-import</code>. Para integrar este comando dentro de nuestro CD es necesario hacer un pequeño cambio en el <em>Makefile</em> para ejecutar este comando con los parámetros necesarios:</p>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">github</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">publish</span>
+    <span class="l l-Scalar l-Scalar-Plain">ghp-import -b $(GITHUB_PAGES_BRANCH) -n $(OUTPUTDIR)</span>
+    <span class="l l-Scalar l-Scalar-Plain">@git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git $(GITHUB_PAGES_BRANCH) &gt; /dev/null</span>
+</pre></div>
+
+
+<p>Para poder automatizar la instalación de todas las dependencias del proyecto utilizaremos el fichero <em>requirements.txt</em>, que agregaremos a nuestro repositorio para poder llevarnos el blog a cualquier lado sin miedo. Para obtener este fichero basta con ejecutar el siguiente comando:</p>
+<div class="highlight"><pre><span></span>pip freeze &gt; requirements.txt
+</pre></div>
+
+
+<p>Este comando de pip almacena todos los paquetes que hayas instalado usando pip en tu ordenador, así que es probable que agrege dependencias que no lo son. Si crees que algo de lo que se ha agregado al fichero no es un requisito del blog, no dudes en borrarlo y probar si Travis sigue generando correctamente el blog.</p>
+<p>Una vez hemos terminado de configurar todo lo necesario para tener el blog con despliegue automático, simplemente agrega los últimos cambios y subelos al repositorio. Pasado uno o dos minutos, deberías ver el resultado de todo el tutorial publicado en tu GitHub Pages personal. ¡Ahora solo te queda crear artículos y mantener actualizado tu blog!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://darkrodry.github.io/tag/tech.html">tech</a>
+      <a href="https://darkrodry.github.io/tag/blog.html">blog</a>
+      <a href="https://darkrodry.github.io/tag/pelican.html">pelican</a>
+      <a href="https://darkrodry.github.io/tag/travis.html">travis</a>
+      <a href="https://darkrodry.github.io/tag/tutorial.html">tutorial</a>
+      <a href="https://darkrodry.github.io/tag/ci.html">CI</a>
+      <a href="https://darkrodry.github.io/tag/github.html">github</a>
+      <a href="https://darkrodry.github.io/tag/github-pages.html">github pages</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'darkrodry-github-blog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Por favor, habilita JavaScript para ver los comentarios.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>Este sitio usa <a href="http://getpelican.com" target="_blank">Pelican</a> - tema <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> por <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " El blog de DarkRodry ",
+  "url" : "https://darkrodry.github.io",
+  "image": "/images/avatar.jpg",
+  "description": "Aventuras y desventuras de un programador"
+}
+</script>
+
+</body>
+</html>
