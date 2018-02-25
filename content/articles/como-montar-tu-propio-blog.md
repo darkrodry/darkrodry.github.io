@@ -1,9 +1,10 @@
 Title: Cómo montar tu propio blog
 Date: 2017-05-23
+Modified: 2018-02-25
 Category: Tutoriales
 Tags: tech, blog, pelican, travis, tutorial, CI, github, github pages
 Slug: como-montar-tu-propio-blog
-Summary: Después de mucho tiempo queriendo escribir algún artículo, finalmente me he decidido empezar por algo sencillo: un pequeño tutorial contando el proceso de creación del blog y su puesta a punto para publicar automáticamente los cambios realizados. 
+Summary: Después de mucho tiempo queriendo escribir algún artículo, finalmente me he decidido empezar por algo sencillo: un pequeño tutorial contando el proceso de creación del blog y su puesta a punto para publicar automáticamente los cambios realizados.
 
 Después de mucho tiempo queriendo escribir algún artículo, finalmente me he decidido empezar por algo sencillo: un pequeño tutorial contando el proceso de creación del blog y su puesta a punto para publicar automáticamente los cambios que realizados. Como ya mencioné anteriormente, este blog está montado usando [GitHub Pages](https://pages.github.com/), [Pelican](http://docs.getpelican.com/en/stable/) con [Flex-Theme](https://github.com/alexandrevicenzi/Flex) y [Travis CI](https://travis-ci.org/).
 
@@ -54,7 +55,7 @@ Antes de continuar, puedes comprobar que todo se ha generado correctamente con e
 
 ```bash
 make html && make serve
-``` 
+```
 
 Una vez se haya generado el html y se levante el servidor, carga la url [http://localhost:8000/](http://localhost:8000/) en tu navegador para ver tus avances.
 
@@ -64,9 +65,9 @@ Una vez se haya generado el html y se levante el servidor, carga la url [http://
 
 Una vez llegados a este punto, es el momento de empezar a agregar contenido al blog. Pelican interpreta que cualquier fichero dentro del directorio *content/* es un artículo del blog, y los utilizará para generar el contenido del mismo. Hay una excepción a esto, ya que si creamos una carpeta *content/pages/* considerará el contenido de la misma como contenido estático del sitio, como puede ser las páginas con información sobre el autor, contacto o proyectos personales.
 
-Para crear contenido en el blog, puedes utilizar dos formatos: [Markdown](https://es.wikipedia.org/wiki/Markdown) o [reStructuredText](http://docutils.sourceforge.net/rst.html). En mi caso he decidido utilizar Markdown ya que estoy más familiarizado con ello y lo uso con algo de frecuencia. 
+Para crear contenido en el blog, puedes utilizar dos formatos: [Markdown](https://es.wikipedia.org/wiki/Markdown) o [reStructuredText](http://docutils.sourceforge.net/rst.html). En mi caso he decidido utilizar Markdown ya que estoy más familiarizado con ello y lo uso con algo de frecuencia.
 
-Crear un artículo es tan sencillo como agregar un fichero a la carpeta *content/* y escribir dentro lo que quieras contar. Para que este artículo sea considerado como tal, hay que agregar antes un pequeño apartado con información sobre el mismo. El resultado de tu artículo 
+Crear un artículo es tan sencillo como agregar un fichero a la carpeta *content/* y escribir dentro lo que quieras contar. Para que este artículo sea considerado como tal, hay que agregar antes un pequeño apartado con información sobre el mismo. El resultado de tu artículo
 
 ```markdown
 Title: Título del post (obligatorio)
@@ -140,16 +141,10 @@ gem install travis
 Una vez instalada, ejecuta el siguiente comando en la raíz de tu repositorio para agregar el token a tu fichero *.travis.yml*:
 
 ```bash
-travis encrypt GH_TOKEN=<<token en bruto>> --add --override
+travis encrypt GH_TOKEN=<token en bruto> --add --override
 ```
 
-También es necesario agregar un fichero *requirements.txt* a tu repositorio con aquellas dependencias necesarias para generar el blog. Para obtener este fichero basta con ejecutar el siguiente comando en tu repositorio:
-
-```bash
-pip freeze > requirements.txt
-```
-
-Por último, es necesario hacer un pequeño cambio en el *Makefile* para permitir subir el resultado de Travis a la rama master de nuestro repositorio de Github.
+Para hacer la subida del blog a GitHub utilizaremos [ghp-import](https://github.com/davisp/ghp-import), ya que nos facilita bastante la tarea. Para instalarlo simplemente hacemos uso de pip y ejecutamos `pip install ghp-import`. Para integrar este comando dentro de nuestro CD es necesario hacer un pequeño cambio en el *Makefile* para ejecutar este comando con los parámetros necesarios:
 
 ```yaml
 github: publish
@@ -157,4 +152,12 @@ github: publish
 	@git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git $(GITHUB_PAGES_BRANCH) > /dev/null
 ```
 
-Para hacer la última prueba, simplemente agrega los últimos cambios en un commit y sube los cambios al repositorio. Pasado uno o dos minutos, deberías ver el resultado de todo el tutorial desplegado en tu GitHub Pages personal. ¡Ahora solo te queda crear artículos y mantener actualizado tu blog!
+Para poder automatizar la instalación de todas las dependencias del proyecto utilizaremos el fichero *requirements.txt*, que agregaremos a nuestro repositorio para poder llevarnos el blog a cualquier lado sin miedo. Para obtener este fichero basta con ejecutar el siguiente comando:
+
+```bash
+pip freeze > requirements.txt
+```
+
+Este comando de pip almacena todos los paquetes que hayas instalado usando pip en tu ordenador, así que es probable que agrege dependencias que no lo son. Si crees que algo de lo que se ha agregado al fichero no es un requisito del blog, no dudes en borrarlo y probar si Travis sigue generando correctamente el blog.
+
+Una vez hemos terminado de configurar todo lo necesario para tener el blog con despliegue automático, simplemente agrega los últimos cambios y subelos al repositorio. Pasado uno o dos minutos, deberías ver el resultado de todo el tutorial publicado en tu GitHub Pages personal. ¡Ahora solo te queda crear artículos y mantener actualizado tu blog!
