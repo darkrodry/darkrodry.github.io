@@ -1,4 +1,4 @@
-# darkrodry.github.io [![Build Status](https://travis-ci.org/darkrodry/darkrodry.github.io.svg?branch=source)](https://travis-ci.org/darkrodry/darkrodry.github.io)
+# darkrodry.github.io [![publish blog](https://github.com/darkrodry/darkrodry.github.io/actions/workflows/publish.yaml/badge.svg)](https://github.com/darkrodry/darkrodry.github.io/actions/workflows/publish.yaml)
 
 Source files for my personal blog.
 
