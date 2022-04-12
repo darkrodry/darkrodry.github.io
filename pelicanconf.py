@@ -62,7 +62,19 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-STATIC_PATHS = ['images', 'extra', 'slides']
+STATIC_PATHS = ['images', 'slides']
 
 # Pigment config
-PYGMENTS_STYLE = 'monokai'
+MARKDOWN = {
+  'extension_configs': {
+      'markdown.extensions.codehilite': {
+        'pygments_style': 'dracula',
+        'noclasses': True,
+        'guess_lang': True,
+      },
+      'markdown.extensions.extra': {},
+      'markdown.extensions.meta': {},
+  },
+  'output_format': 'html5',
+}
+

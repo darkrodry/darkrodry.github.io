@@ -4,10 +4,10 @@ docutils==0.16
 feedgenerator==1.9
 ghp-import==0.5.4
 Jinja2==2.11.3
-Markdown==3.0
+Markdown==3.3.6
 MarkupSafe==0.23
 pelican==4.7.2
-Pygments==2.7.4
+Pygments==2.11.2
 python-dateutil==2.8.0
 pytz==2020.1
 six==1.10.0

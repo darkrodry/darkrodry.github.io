@@ -24,13 +24,13 @@ Como indican en su [web](http://docs.getpelican.com/en/stable/), Pelican es una 
 
 Para instalar Pelican en tu ordenador necesitas tener Python. Recomiendo usar la versión 3.5 o superior, ya que tuve algún problema usando la 2.7 (si queréis mantener ambas versiones probad [pyenv](https://github.com/pyenv/pyenv)). Pelican se encuentra dentro de *pip*, por lo que instalarlo es tan sencillo como ejecutar en tu terminal:
 
-```bash
+```yaml
 pip install pelican
 ```
 
 Pelican proporciona un simple quickstart para generar el esqueleto del proyecto, así como los ficheros de configuración y un Makefile para ejecutar el mismo. Para ejecutar este quickstart (dentro de la rama elegida para subir el código al repositorio) escribe en tu terminal el siguiente comando y responde a las preguntas:
 
-```bash
+```yaml
 pelican-quickstart
 ```
 
@@ -53,7 +53,7 @@ Una vez finalizado el quickstart, podrás observar que se han generado una serie
 
 Antes de continuar, puedes comprobar que todo se ha generado correctamente con el siguiente comando:
 
-```bash
+```yaml
 make html && make serve
 ```
 
@@ -69,7 +69,7 @@ Para crear contenido en el blog, puedes utilizar dos formatos: [Markdown](https:
 
 Crear un artículo es tan sencillo como agregar un fichero a la carpeta *content/* y escribir dentro lo que quieras contar. Para que este artículo sea considerado como tal, hay que agregar antes un pequeño apartado con información sobre el mismo. El resultado de tu artículo
 
-```markdown
+```
 Title: Título del post (obligatorio)
 Date: 2017-05-21 10:20 (obligatorio)
 Modified: 2017-05-22 19:30
@@ -94,7 +94,7 @@ A estas alturas puede ser que estés empezando a dudar del estilo ofrecido por t
 
 Para agregar este tema (o cualquier otro) al blog, hay que hacer dos pequeños cambios. Lo primero es descargar el código del tema. Yo he decidido importar el tema usando [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) con el siguiente comando:
 
-```bash
+```yaml
 git submodule add https://github.com/alexandrevicenzi/Flex.git theme-flex
 ```
 
@@ -134,13 +134,13 @@ Como podrás observar, este fichero tiene un campo `secure:` con un token. ¿De 
 
 Para dar seguridad a este token, la gente de Travis CI tiene un cliente en Ruby con diferentes herramientas, y entre ellas una para cifrar estas claves. Para instalar estas herramientas necesitaremos tener Ruby en nuestro ordenador e instalar una nueva gema:
 
-```bash
+```yaml
 gem install travis
 ```
 
 Una vez instalada, ejecuta el siguiente comando en la raíz de tu repositorio para agregar el token a tu fichero *.travis.yml*:
 
-```bash
+```yaml
 travis encrypt GH_TOKEN=<token en bruto> --add --override
 ```
 
@@ -154,7 +154,7 @@ github: publish
 
 Para poder automatizar la instalación de todas las dependencias del proyecto utilizaremos el fichero *requirements.txt*, que agregaremos a nuestro repositorio para poder llevarnos el blog a cualquier lado sin miedo. Para obtener este fichero basta con ejecutar el siguiente comando:
 
-```bash
+```yaml
 pip freeze > requirements.txt
 ```
 
