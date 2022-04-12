@@ -17,6 +17,3 @@ FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
-
-# Integrations
-GOOGLE_ANALYTICS = "UA-100015471-1"
