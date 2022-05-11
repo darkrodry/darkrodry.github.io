@@ -47,9 +47,9 @@ No os preocupéis si configuráis algo mal, está configuración se puede modifi
 Una vez finalizado el quickstart, podrás observar que se han generado una serie de ficheros y carpetas. Los más importantes son:
 
 - *content/*: en este directorio va todo el contenido del blog (artículos, imágenes...)
-- *output/*: aquí se almacena el contenido autogenerado al usar Pelican. Es muy recomendable agregar este fichero a nuestro .gitignore
+- *output/*: aquí se almacena el contenido auto generado al usar Pelican. Es muy recomendable agregar este fichero a nuestro .gitignore
 - *pelicanconf.py*: fichero de configuración principal con parámetros comunes y de despliegue local
-- *publishconf.py*: fichero que sobreescribe parte de la configuración de *pelicanconf.py* con los parámetros necesarios a la hora de publicar
+- *publishconf.py*: fichero que sobrescribe parte de la configuración de *pelicanconf.py* con los parámetros necesarios a la hora de publicar
 
 Antes de continuar, puedes comprobar que todo se ha generado correctamente con el siguiente comando:
 
@@ -158,6 +158,6 @@ Para poder automatizar la instalación de todas las dependencias del proyecto ut
 pip freeze > requirements.txt
 ```
 
-Este comando de pip almacena todos los paquetes que hayas instalado usando pip en tu ordenador, así que es probable que agrege dependencias que no lo son. Si crees que algo de lo que se ha agregado al fichero no es un requisito del blog, no dudes en borrarlo y probar si Travis sigue generando correctamente el blog.
+Este comando de pip almacena todos los paquetes que hayas instalado usando pip en tu ordenador, así que es probable que agregue dependencias que no lo son. Si crees que algo de lo que se ha agregado al fichero no es un requisito del blog, no dudes en borrarlo y probar si Travis sigue generando correctamente el blog.
 
-Una vez hemos terminado de configurar todo lo necesario para tener el blog con despliegue automático, simplemente agrega los últimos cambios y subelos al repositorio. Pasado uno o dos minutos, deberías ver el resultado de todo el tutorial publicado en tu GitHub Pages personal. ¡Ahora solo te queda crear artículos y mantener actualizado tu blog!
+Una vez hemos terminado de configurar todo lo necesario para tener el blog con despliegue automático, simplemente agrega los últimos cambios y súbelos al repositorio. Pasado uno o dos minutos, deberías ver el resultado de todo el tutorial publicado en tu GitHub Pages personal. ¡Ahora solo te queda crear artículos y mantener actualizado tu blog!
