@@ -57,7 +57,11 @@ SOCIAL = (('linkedin', 'https://es.linkedin.com/in/rodrigodefrutos'),
 	('github', 'https://github.com/darkrodry'),
 	('twitter', 'https://twitter.com/DarkRodry'))
 
+# Default configs
 DEFAULT_PAGINATION = 10
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -77,4 +81,5 @@ MARKDOWN = {
   },
   'output_format': 'html5',
 }
+
 

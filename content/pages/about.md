@@ -1,6 +1,7 @@
 Title: Sobre mí
 Date: 2017-01-10
 Modified: 2022-02-09
+Status: published
 
 ¡Hola! ¡Mi nombre es Rodrigo y este es mi blog!
 

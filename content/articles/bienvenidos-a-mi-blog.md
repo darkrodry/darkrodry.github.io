@@ -3,6 +3,7 @@ Date: 2017-01-05
 Category: Offtopic
 Tags: offtopic
 Slug: bienvenidos-a-mi-blog
+Status: published
 Summary: Durante las próximas semanas espero empezar a llenar de contenido este blog, con artículos sobre aventuras y desventuras con nuevos proyectos y tecnologías. ¡Disfrutad!
 
 ¡Bienvenidos a mi blog!

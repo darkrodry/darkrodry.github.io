@@ -1,6 +1,7 @@
 Title: Charlas
 Date: 2017-05-29
 Modified: 2022-02-09
+Status: published
 
 * **¿Qué demonios es la programación funcional?** - 2/3/2018 - [t3chfest 2017](https://t3chfest.es/2018/programa/que-demonios-es-la-programacion-funcional/) - [video](https://youtu.be/hzy4_K25h3U) - [diapositivas](https://t3chfest.es/2018/static/resources/events_slides/RodrigoDeFrutos-ProgramacionFuncional.pdf%3Fq=1520103912)
 

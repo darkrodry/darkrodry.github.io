@@ -3,6 +3,7 @@ Date: 2017-01-07
 Category: Offtopic
 Tags: offtopic, objetivos
 Slug: objetivos-para-2017
+Status: published
 Summary: Hace unos días David Bonilla publicaba [un artículo con sus objetivos para 2017](http://www.bonillaware.com/objetivos-para-2017), en el que además nos animaba a hacer públicos los nuestros. Llevo uno cuantos años queriendo publicar mi propia lista, y aprovechando el proyecto del blog personal he decidido que este sea el primero.
 
 Hace unos días David Bonilla publicaba [un artículo con sus objetivos para 2017](http://www.bonillaware.com/objetivos-para-2017), en el que además nos animaba a hacer públicos los nuestros. Llevo uno cuantos años queriendo publicar mi propia lista, y aprovechando el proyecto del blog personal he decidido que este sea el primero.

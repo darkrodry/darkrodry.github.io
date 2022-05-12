@@ -3,6 +3,7 @@ Date: 2022-04-12
 Category: Testing
 Tags: testing, tech
 Slug: test-doubles
+Status: published
 Summary: A la hora de testear es necesario falsear implementaciones de dependencias en nuestro código a testear. Para ello usaremos **test doubles**, que nos permitirán sustituir nuestras implementaciones por algo falso que tendremos bajo nuestro control.
 
 A la hora de testear es necesario falsear implementaciones de dependencias en nuestro código a testear. Para ello usaremos ***test doubles***, que nos permitirán sustituir nuestras implementaciones por algo falso que tendremos bajo nuestro control. Existen varios tipos de *test doubles*:
