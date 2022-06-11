@@ -43,7 +43,7 @@ En mi blog he usado en gran parte la configuración por defecto, a excepción de
 
 No os preocupéis si configuráis algo mal, está configuración se puede modificar más adelante sin ningún problema.
 
-<img style="display: block; margin-left: auto; margin-right: auto" src="images/pelican-quickstart-demo.png">
+<img style="display: block; margin-left: auto; margin-right: auto" src="images/pelican-quickstart-demo.png" alt="ejemplo de ejecución del quickstart">
 
 Una vez finalizado el quickstart, podrás observar que se han generado una serie de ficheros y carpetas. Los más importantes son:
 
@@ -60,7 +60,7 @@ make html && make serve
 
 Una vez se haya generado el html y se levante el servidor, carga la url [http://localhost:8000/](http://localhost:8000/) en tu navegador para ver tus avances.
 
-<img style="display: block; margin-left: auto; margin-right: auto" src="images/pelican-first-execution.png">
+<img style="display: block; margin-left: auto; margin-right: auto" src="images/pelican-first-execution.png" alt="blog desplegado por defecto">
 
 ## Creando el primer post
 
@@ -85,7 +85,7 @@ A partir de aquí, el contenido de tu nuevo artículo usando *Markdown*.
 
 Una vez creado el artículo, prueba a generar de nuevo el blog y comprueba el resultado.
 
-<img style="display: block; margin-left: auto; margin-right: auto" src="images/pelican-first-post.png">
+<img style="display: block; margin-left: auto; margin-right: auto" src="images/pelican-first-post.png" alt="ejemplo de primer artículo creado con pelican">
 
 Puedes ver más información sobre cómo crear artículos en [la documentación de Pelican](http://docs.getpelican.com/en/stable/content.html#file-metadata).
 

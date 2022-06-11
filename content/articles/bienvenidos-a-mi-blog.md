@@ -12,4 +12,4 @@ Después de mucho tiempo debatiendo proyectos con mi buen amigo [JesusMtnez](htt
 
 Durante las próximas semanas espero empezar a llenar de contenido este blog, con artículos sobre aventuras y desventuras con nuevos proyectos y tecnologías. ¡Disfrutad!
 
-<img style="display: block; margin-left: auto; margin-right: auto" src="images/excited-finn.gif">
+<img style="display: block; margin-left: auto; margin-right: auto" src="images/excited-finn.gif" alt="Finn de hora de aventuras emocionado">

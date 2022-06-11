@@ -15,4 +15,4 @@ He decidido montar este blog con el objetivo de contar mis aventuras con nuevas 
 
 Aparte del blog, también he sido fundador del [T3chFest](https://t3chfest.uc3m.es) y he colaborado con la gente de [βetabeers](https://betabeers.com/) en sus eventos y en su podcast.
 
-<img style="display: block; margin-left: auto; margin-right: auto" src="http://i.giphy.com/OkMQ3AnbmkE5a.gif">
+<img style="display: block; margin-left: auto; margin-right: auto" src="http://i.giphy.com/OkMQ3AnbmkE5a.gif" alt="BMO afirmando que esto tiene sentido">

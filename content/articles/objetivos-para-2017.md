@@ -20,6 +20,6 @@ Así que, sin más dilación, os dejo con mis propósitos para 2017:
 
 4. **Publicar post técnicos en el blog:** el motivo por el que he decidido crear el blog es para intentar ser más constante con mis proyectos personales y publicar resúmenes de mis aventuras. Todavía no se muy bien con que trastearé este año (Scala aparte), pero intentaré publicar artículos con algo de regularidad.
 
-<img style="display: block; margin-left: auto; margin-right: auto" src="http://i.giphy.com/eNweOH3UEi33a.gif">
+<img style="display: block; margin-left: auto; margin-right: auto" src="http://i.giphy.com/eNweOH3UEi33a.gif" alt="challenge accepted">
 
 Ahora sólo me queda esperar a finales del año para saber si he sido capaz de cumplir estas metas... o al menos ser capaz acercarme a la línea de llegada. ¡Nos vemos en 2018!
