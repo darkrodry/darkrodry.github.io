@@ -32,7 +32,7 @@ PLUGINS = [
 TIMEZONE = 'Europe/Madrid'
 DEFAULT_LANG = 'es'
 OG_LOCALE = 'es_ES'
-I18N_TEMPLATES_LANG = 'en'
+I18N_TEMPLATES_LANG = 'es'
 LOCALE = 'es_ES.UTF-8'
 DATE_FORMATS = {
     'es': '%d de %B de %Y'

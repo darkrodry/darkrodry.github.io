@@ -1,7 +1,7 @@
 Title: The Pragmatic Programmer: mis notas
 Date: 2022-05-14
 Category: Libros
-Tags: libros, tech
+Tags: libros, tech, pragmatic programmer
 Slug: pragmatic-programmer-notas
 Status: published
 Summary: Hace muchos años (en mis comienzos en el mundo del desarrollo) me leí el libro [The Pragmatic Programmer](https://www.amazon.es/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052). Recientemente, un compañero me comentó que se lo estaba leyendo, ya que es un libro muy recomendado en el sector, y me ha dado por revisar las notas que tomé en su día sobre el libro. Con intención de recordarlas, y ya de paso pasarlas a limpio, he decidido subirlas aquí por si a alguien más le pueden interesar.

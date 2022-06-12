@@ -2,7 +2,7 @@ Title: Cómo montar tu propio blog
 Date: 2017-05-23
 Modified: 2018-02-25
 Category: Tutoriales
-Tags: tech, blog, pelican, travis, tutorial, CI, github, github pages
+Tags: tech, pelican, tutorial
 Slug: como-montar-tu-propio-blog
 Status: published
 Summary: Después de mucho tiempo queriendo escribir algún artículo, finalmente me he decidido empezar por algo sencillo: un pequeño tutorial contando el proceso de creación del blog y su puesta a punto para publicar automáticamente los cambios realizados.
