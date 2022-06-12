@@ -22,7 +22,11 @@ JINJA_ENVIRONMENT = {
   'extensions': ['jinja2.ext.i18n']
 }
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['i18n_subsites', 'post_stats']
+PLUGINS = [
+  'i18n_subsites',
+  'minchin.pelican.plugins.nojekyll',
+  'post_stats'
+]
 
 # Locale config
 TIMEZONE = 'Europe/Madrid'
