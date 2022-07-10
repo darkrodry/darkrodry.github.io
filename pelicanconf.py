@@ -25,7 +25,7 @@ PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = [
   'i18n_subsites',
   'minchin.pelican.plugins.nojekyll',
-  'post_stats'
+  'post_stats',
 ]
 
 # Locale config

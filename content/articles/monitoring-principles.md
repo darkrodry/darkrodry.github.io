@@ -78,3 +78,5 @@ En muchos proyectos es necesario tener un equipo *on-call*, que tenga que estar 
 ### La importancia de la estadística
 
 Como último punto, es importante destacar la importancia de la estadística a la hora de tener buenas métricas. Ten siempre en mente la media, mediana, temporalidad, cuartiles/percentiles y desviación estándar a la hora de calcular métricas y alertas para tener información mas relevante.
+
+En el [siguiente artículo](tacticas-monitorizacion) nos centraremos en las diferentes partes del sistema a monitorizar.
