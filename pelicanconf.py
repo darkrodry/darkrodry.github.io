@@ -33,7 +33,7 @@ TIMEZONE = 'Europe/Madrid'
 DEFAULT_LANG = 'es'
 OG_LOCALE = 'es_ES'
 I18N_TEMPLATES_LANG = 'es'
-LOCALE = 'es_ES.UTF-8'
+LOCALE = ('es_ES.UTF-8')
 DATE_FORMATS = {
     'es': '%d de %B de %Y'
 }
@@ -76,6 +76,7 @@ STATIC_PATHS = ['images', 'slides']
 MARKDOWN = {
   'extension_configs': {
       'markdown.extensions.codehilite': {
+        'css_class': 'highlight',
         'pygments_style': 'dracula',
         'noclasses': True,
         'guess_lang': True,

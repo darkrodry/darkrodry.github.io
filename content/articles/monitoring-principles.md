@@ -1,6 +1,6 @@
 Title: Principios básicos para monitorización
 Date: 2022-06-12
-Modified: 2022-06-13
+Modified: 2022-07-10
 Category: Monitoring
 Tags: libros, tech, monitoring, practical monitoring,
 Slug: principios-basicos-monitorizacion
