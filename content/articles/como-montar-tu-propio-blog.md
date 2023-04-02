@@ -1,11 +1,13 @@
 Title: Cómo montar tu propio blog
 Date: 2017-05-23
-Modified: 2018-02-25
+Modified: 2023-04-02
 Category: Tutoriales
 Tags: tech, pelican, tutorial
 Slug: como-montar-tu-propio-blog
 Status: published
-Summary: Después de mucho tiempo queriendo escribir algún artículo, finalmente me he decidido empezar por algo sencillo: un pequeño tutorial contando el proceso de creación del blog y su puesta a punto para publicar automáticamente los cambios realizados.
+Summary: _(Desactualizado)_ Después de mucho tiempo queriendo escribir algún artículo, finalmente me he decidido empezar por algo sencillo: un pequeño tutorial contando el proceso de creación del blog y su puesta a punto para publicar automáticamente los cambios realizados.
+
+_Nota: este artículo detalla la versión anterior de mi blog. Actualmente el artículo se publica usando Github action y varias de las configuraciones y versiones están desactualizadas. Si tienes cualquier duda consulta el repositorio o mándame un mensaje si necesitas un cable ;)_
 
 Después de mucho tiempo queriendo escribir algún artículo, finalmente me he decidido empezar por algo sencillo: un pequeño tutorial contando el proceso de creación del blog y su puesta a punto para publicar automáticamente los cambios que realizados. Como ya mencioné anteriormente, este blog está montado usando [GitHub Pages](https://pages.github.com/), [Pelican](http://docs.getpelican.com/en/stable/) con [Flex-Theme](https://github.com/alexandrevicenzi/Flex) y [Travis CI](https://travis-ci.org/).
 
