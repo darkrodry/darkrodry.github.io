@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://darkrodry.github.io/theme/pygments/github.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://darkrodry.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="El blog de DarkRodry Atom">
+
+
+
+  
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+ 
+
+<meta name="author" content="DarkRodry" />
+<meta name="description" content="Hace muchos años (en mis comienzos en el mundo del desarrollo) me leí el libro The Pragmatic Programmer. Recientemente, un compañero me comentó que se lo estaba leyendo, ya que es un libro muy recomendado en el sector, y me ha dado por revisar las notas que tomé en su día sobre el libro. Con intención de recordarlas, y ya de paso pasarlas a limpio, he decidido subirlas aquí por si a alguien más le pueden interesar." />
+<meta name="keywords" content="libros, tech, pragmatic programmer">
+
+
+  <meta property="og:site_name" content="El blog de DarkRodry"/>
+  <meta property="og:title" content="The Pragmatic Programmer: mis notas"/>
+  <meta property="og:description" content="Hace muchos años (en mis comienzos en el mundo del desarrollo) me leí el libro The Pragmatic Programmer. Recientemente, un compañero me comentó que se lo estaba leyendo, ya que es un libro muy recomendado en el sector, y me ha dado por revisar las notas que tomé en su día sobre el libro. Con intención de recordarlas, y ya de paso pasarlas a limpio, he decidido subirlas aquí por si a alguien más le pueden interesar."/>
+  <meta property="og:locale" content="es_ES"/>
+  <meta property="og:url" content="https://darkrodry.github.io/pragmatic-programmer-notas.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2022-05-14 00:00:00+02:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="https://darkrodry.github.io/author/darkrodry.html">
+  <meta property="article:section" content="Libros"/>
+  <meta property="article:tag" content="libros"/>
+  <meta property="article:tag" content="tech"/>
+  <meta property="article:tag" content="pragmatic programmer"/>
+  <meta property="og:image" content="/images/avatar.jpg">
+
+  <title>El blog de DarkRodry &ndash; The Pragmatic Programmer: mis notas</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://darkrodry.github.io/">
+        <img src="/images/avatar.jpg" alt="Rodrigo de Frutos" title="Rodrigo de Frutos">
+      </a>
+
+      <h1>
+        <a href="https://darkrodry.github.io/">Rodrigo de Frutos</a>
+      </h1>
+
+<p>Miscelaneous Developer</p>
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://darkrodry.github.io/pages/sobre-mi.html">
+                  Sobre mí
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://darkrodry.github.io/pages/charlas.html">
+                  Charlas
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://es.linkedin.com/in/rodrigodefrutos" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/darkrodry" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/DarkRodry" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://darkrodry.github.io/">Inicio</a>
+
+      <a href="/archives.html">Archivo</a>
+      <a href="/categories.html">Categorias</a>
+
+      <a href="https://darkrodry.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="pragmatic-programmer-notas">The Pragmatic Programmer: mis notas</h1>
+    <p>
+      Publicado el 14 de May de 2022 en <a href="https://darkrodry.github.io/category/libros.html">Libros</a>
+
+        &#8226; 12 min de lectura
+    </p>
+  </header>
+
+
+  <div>
+    <p>Hace muchos años (en mis comienzos en el mundo del desarrollo) me leí el libro <a href="https://www.amazon.es/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052">The Pragmatic Programmer</a>. Recientemente, un compañero me comentó que se lo estaba leyendo, ya que es un libro muy recomendado en el sector, y me ha dado por revisar las notas que tomé en su día sobre el libro. Con intención de recordarlas, y ya de paso pasarlas a limpio, he decidido subirlas aquí por si a alguien más le pueden interesar.</p>
+<p><strong>Tip 1: Care about your craft.</strong> No hay otros puntos importantes en el desarrollo de software si no te preocupas por hacer las cosas bien.</p>
+<p><strong>Tip 2: Think! about your work.</strong> Piensa en lo que haces mientras lo estás haciendo. Se crítico y valora tu trabajo.</p>
+<p><strong>Tip 3: Provide options, don't make lame excuses.</strong> Tu papel es el de proporcionar soluciones, opciones y alternativas a los problemas. Si algo sale mal, no pierdas el tiempo buscando excusas y dedícalo a ver cómo puedes salvar la situación.</p>
+<p><strong>Tip 4: Don't live with broken windows.</strong> Para evitar que el mal código eche raíces, nunca dejes "ventanas rotas" (malos diseños, decisiones erroneas o mal código) sin arreglar cuando las veas. Del mismo modo, evita romper ventanas cuando salga algún fuego, evitando las posteriores consecuencias.</p>
+<p><strong>Tip 5: Be a catalyst for change.</strong> No puedes forzar a la gente a adoptar una solución Si ves una mejora obvia, impleméntala aún sin permiso y enséñale a la gente cómo podría mejorar su futuro adoptándola. Es mejor pedir perdón que pedir permiso.</p>
+<p><strong>Tip 6: Remember the big picture.</strong> Ten siempre en mente todo lo que sucede a tu alrededor, no sólo lo que estás trabajando. Los cambios pequeños pueden desmoronar todo el sistema.</p>
+<p><strong>Tip 7: Make quality a requirement issue.</strong> El entorno y la calidad del software deberían estar incluidos en los requisitos del sistema. Muchos usuarios prefieren un software funcional hoy que vaya incluyendo mejoras y puliéndose en el tiempo que esperar un año a una versión completa. Haz software que sea "lo suficientemente bueno". También debes saber cuando parar de refinar y mejorar un programa, ya que el resultado puede no terminar siendo el deseado.</p>
+<p><strong>Tip 8: Invest regularly in your knowledge portfolio.</strong> Intenta ampliar tus conocimientos invirtiendo en ellos regularmente, aunque sea en pequeñas cantidades. Diversifica tu aprendizaje con diferentes tecnologías y arriesgando en algunas de ellas (no todas), e investigando tecnologías emergentes (buy low sell high). Revisa y balancea tus inversiones periódicamente intentando encontrar un equilibrio entre ellas.</p>
+<p><strong>Tip 9: Critically analyze what you read and hear.</strong> No te dejes impresionar por los comerciales, el hype o falsos gurús. Analiza con ojo crítico todo e intenta comprobar cómo adaptarlo a tus proyectos o tu portfolio de conocimientos.</p>
+<p><strong>Tip 10: It's both what you say and the way you say it.</strong> Intenta comunicar tus ideas lo mejor posible para hacerlas entendibles a todas las personas. Analiza lo que quieres decir, conoce a tu audiencia y adapta tu discurso. Elige un momento apropiado y un estilo adecuado (documentación, email, charla...). Cuida la presentación y haz que luzca bien. Involucra a tu audiencia y devuelve lo que esta te ofrece, respondiendo preguntas o debatiendo nuevas propuestas.</p>
+<p><strong>Tip 11: Don't repeat yourself.</strong> Toda representación del conocimiento debe tener una única, no ambigua y autoritaria representación dentro del sistema. La repetición de código viene dada por 4 posibles factores: duplicación impuesta (por el lenguaje, documentación, entorno...), inadvertida (el desarrollador no es consciente), impaciente (se duplica código por ser la opción rápida y sencilla) o inter developer (varios desarrolladores duplican código dentro de un mismo proyecto sin conocer el código del otro).</p>
+<p><strong>Tip 12: Make it easy to reuse.</strong> Aplicando el principio anterior puedes conseguir un entorno donde es fácil encontrar y reutilizar funcionalidades. Esto implicará que la gente reutilice código con más facilidad</p>
+<p><strong>Tip 13: Eliminate effects between unrelated things.</strong> Se dice que un sistema es ortogonal cuando la variación de un elemento no afecta a los demás, ganando en productividad y reduciendo riesgos riesgos. Esto se consigue creando componentes que sean autocontenidos, independientes y con una única responsabilidad. Para que tu proyecto tenga más ortogonalidad tienes que tener en cuenta los equipos del proyecto (cuanto más se pueda separar sin causar problemas mejor), los diseños, las herramientas y librerías utilizadas, el código (desacoplado, sin usar datos globales y evitando duplicidad), el testing y una buena documentación.</p>
+<p><strong>Tip 14: There are no final decisions.</strong> Intenta modularizar tu código de tal manera que luego pueda ser propenso a cambios (incluso radicales) sin necesitar alterar el sistema completo. Abstrae todos los módulos usando interfaces, automatizando el código o aplicando patrones.</p>
+<p><strong>Tip 15: Use tracer bullets to find the target.</strong> Intenta desarrollar un producto mínimo para empezar a ver resultados y obtener feedback, viendo así si tu propuesta y algoritmos se acercan al objetivo planteado.</p>
+<p><strong>Tip 16: Prototype to learn.</strong> Con un prototipo puedes ser capaz de ver la arquitectura, nuevas funcionalidades en un sistema existente, la estructura externa de los datos, analizar herramientas de terceros, el rendimiento o el diseño de las interfaces. El valor no está en el código que haces, sino en el conocimiento que adquieres.</p>
+<p><strong>Tip 17: Program close to the domain problem.</strong> Intenta trabajar con expresiones relacionadas con el dominio (nombres de métodos, variables, ficheros...) reconocibles por cualquier usuario.</p>
+<p><strong>Tip 18: Estimate to avoid surprises.</strong> Estima antes de empezar, desde plazos a rendimiento o memoria. Para estimar correctamente debes comprender el problema, construir un modelo mental y separarlo en componentes, estimar el coste de cada uno de ellos para obtener la respuesta. Esto te permite sacar a flote potenciales problemas antes de empezar a trabajar. Analiza tus estimaciones para aprender a hacer mejores estimaciones.</p>
+<p><strong>Tip 19: Iterate the schedule with the code.</strong> Es difícil estimar un proyecto desconocido (dominio, tecnología, equipo...), por lo que es recomendable iterar la planificación periódicamente: comprueba requisitos, analiza los riesgos, diseña, implementa y validad con los usuarios.</p>
+<p><strong>Tip 20:? Keep knowledge in plain text.</strong> El texto plano es entendible por todo el mundo, por lo que es una forma muy útil de mantener la información con el paso del tiempo. Los ficheros de texto plano pueden ser computables, por lo que se pueden utilizar para testear y ayudar al testeo, y es común utilizarlos como ficheros de configuración.</p>
+<p><strong>Tip 21: Use the power of command shells.</strong> Conocer los comandos de la terminal ofrece muchas más posibilidades que usar la GUI, permitiendo además automatizar tareas mediante macros.</p>
+<p><strong>Tip 22: Use a single editor well.</strong> Conoce los atajos de teclado y las opciones que tu editor posee. El editor debe ser configurable (atajos, estilos, tamaños, ventanas...), extensible (agregar nuevos lenguajes) y programable (macros, snippets).</p>
+<p><strong>Tip 23: Always use source code control.</strong> Esta herramienta te permite controlar el historial de un proyecto (sea de código o no) pudiendo volver hacía atrás en caso de necesitarlo, almacenar la información y trabajar en paralelo.</p>
+<p><strong>Tip 24: Fix the problem, not the blame.</strong> Los bugs no son un problema de una persona, son de todo el equipo. Localízalos y arréglalos, no pierdas el tiempo buscando a un culpable.</p>
+<p><strong>Tip 25: Don't panic when debugging.</strong> Antes de comenzar a debugear, piensa en las causas del bug. Analiza las condiciones bajo las que se produce y profundiza, no apliques un parche superficial. Las estrategias para debugear son analizar los datos utilizados (tipos, valores, etc), agregar trazas para ver el estado del sistema, contarle el flujo a un "patito de goma" y no culpar a terceros (librerías o sistemas operativos).</p>
+<p><strong>Tip 26: <em>"select"</em> isn't broken.</strong> El error probablemente esté en tu código, no en el de otros. Las librerías y los sistemas operativos están suficientemente testeados y probados como para no haber notificado el error que estás buscando.</p>
+<p><strong>Tip 27: Don't assume it - prove it.</strong> Prueba que tu código funcione con datos y condiciones de entornos reales antes de decir que el error no se encuentra en él. Una vez localizado, asegúrate de agregar test y todo lo necesario para que los errores no vuelvan a repetirse.</p>
+<p><strong>Tip 28: Learn a text manipulation language.</strong> Aprende a hacer scripts que trabajen con texto plano con lenguajes como Python o Perl. Esto te puede ayudar a automatizar tareas o producir documentos.</p>
+<p><strong>Tip 29: Write code that writes code.</strong> Aprende a construir generadores de código para automatizar tareas. Esto permite variar la especificación de los datos y autogenerar sus implementaciones (bases de datos, objetos, estructuras...) evitando duplicidades. Los generadores de código pueden ser pasivos (se utilizan para una sola tarea, cómo generar templates o traducir código) o activos (tareas repetitivas, cómo generar objetos a partir de la base de datos o una configuración inicial).</p>
+<p><strong>Tip 30: You can't write perfect software.</strong> Diseña tu código de forma que sea resistente a errores.</p>
+<p><strong>Tip 31: Design with contracts.</strong> Haz código que cumpla exactamente lo especificado definiendo contratos. Tu código debe ser "vago" y ceñirse a lo que hace, aceptando lo mínimo posible y devolviendo lo que promete. Dadas unas precondiciones cambiar el estado en función de las mismas teniendo unas invariantes en el proceso.</p>
+<p><strong>Tip 32: Crash early.</strong> Si se detecta un fallo y no se puede arreglar, es mejor que el flujo se detenga lo antes posible a que continue la ejecución modificando cosas críticas.</p>
+<p><strong>Tip 33: If it can't happen, use assertions to ensure that it won't.</strong> Nunca des por hecho que una circunstancia no se va a dar y usa <em>assertions</em> para validar valores en tu código.</p>
+<p><strong>Tip 34: Use exceptions for exceptional problems.</strong> No uses excepciones para controlar el flujo de la aplicación, solo para cosas excepcionales. Usar demasiadas excepciones pueden terminar derivando en problemas de <em>spaghetti code</em>.</p>
+<p><strong>Tip 35: Finish what you start.</strong> Controla la creación y supresión de recursos de tus aplicaciones. Si empiezas a utilizar un recurso, asegurate de</p>
+<p><strong>Tip 36: Minimize coupling between modules.</strong> Intenta proporcionarle a los constructores y métodos de toda la información necesaria directamente, eliminando el acoplamiento entre módulos. Aplica siempre la <a href="https://es.wikipedia.org/wiki/Ley_de_Demeter">Ley de Demeter</a>.</p>
+<p><strong>Tip 37: Configure, don't integrate.</strong> Intenta usar metadatos para permitir modificar el programa sin tener que modificar el código, asi como almacenar todas las configuraciones.</p>
+<p><strong>Tip 38: Put abstractions in code, details in metadata.</strong> Programa para el caso general y almacena las especificaciones y configuraciones fuera del código compilable.</p>
+<p><strong>Tip 39: Analyze workflows to improve concurrency.</strong> Usar diagramas de actividad permite ver como podemos maximizar el paralelismo.</p>
+<p><strong>Tip 40: Design using services.</strong> Crea pequeños servicios independientes con una interfaz bien definida que permitan realizar tareas de forma independiente en paralelo.</p>
+<p><strong>Tip 41: Always design for concurrency.</strong> Al diseñar objetos o módulos, piensa que estos se pueden ejecutar en paralelo, por lo que es recomendable intenta que se pueda acceder a su estado de forma segura. Intenta eliminar siempre estados globales.</p>
+<p><strong>Tip 42: Separate views from models.</strong> Separando la responsabilidad de los elementos respecto a sus vistas ganas flexibilidad. También es recomendable separar la vista del modelo que la controla (MVC, MVP...).</p>
+<p><strong>Tip 43: Use blackboards to coordinate workflows.</strong> De esta forma, tendrás un repositorio común de objetos que pueden ser fácilmente utilizados en función de los requisitos del programa, controlando además el flujo de la aplicación.</p>
+<p><strong>Tip 44: Don't program by coincidence.</strong> Las cosas no deben funcionar por casualidad. Documenta y escribe código que funcione y sea sencillo, testea, entiende el porqué de ese código o cámbialo. No programes a ciegas sin entender que está sucediendo por debajo.</p>
+<p><strong>Tip 45: Estimate the order of your algorithms.</strong> A la hora de programar estima la complejidad de tu código.Si esta es elevada, dale una pensada a los algoritmos y hazlos eficientes. Usa estas estimaciones: bucles simples <code>O(n)</code>, anidados <code>O(n^2)</code>, particionado binario <code>O(log(n))</code>, divide y vencerás <code>O(nlog(n))</code> y combinatorias <code>O(2^n)</code>.</p>
+<p><strong>Tip 46: Test your estimates.</strong> Prueba tanto en un entorno real como en uno de pruebas para entender mejor el funcionamiento de tus algoritmos.</p>
+<p><strong>Tip 47: Refactor early, refactor often.</strong> No esperes a que pase el tiempo para refactorizar y hazlo con frecuencia. Refactoriza para eliminar duplicidad, para mejorar la independencia de tus módulos, al mejorar tu conocimiento del problema o por rendimiento.</p>
+<p><strong>Tip 48: Design to test.</strong> A la hora de programar, diseña y plantea tanto el programa como los tests, viendo así condiciones que deben cumplir y posibles problemas. Esto te permite desarrollar una buena interfaz antes de darle contenido.</p>
+<p><strong>Tip 49: Test your software, or your users will.</strong> Crea tests desde el principio y prueba bien tu código, no dejes que sean los usuarios los que encuentren los fallos.</p>
+<p><strong>Tip 50: Don't use wizard code you don't understand.</strong> Si vas a generar código base usando <em>wizards</em>, detente y asegúrate de comprender todo lo que vas a generar. En caso contrario descarta su uso.</p>
+<p><strong>Tip 51: Don't gather requirements - dig for them.</strong> Muchas veces los clientes no saben concretar los requisitos. Haz preguntas, detalla y concreta el comportamiento. Los requisitos se ocultan bajo capas de supuestos, conceptos erróneos y burocracia.</p>
+<p><strong>Tip 52: Work with a user to thing like a user.</strong> Trabaja con él, entiendo su trabajo, tareas, problemas... para poder hacer un software que se adapte a sus necesidades.</p>
+<p><strong>Tip 53: Abstraction live longer than details.</strong> Desarrolla intentando abstraer datos genéricos, contratos y condiciones generales sobre implementaciones concretas.</p>
+<p><strong>Tip 54: Use a project glossary.</strong> Ten un único glosario de palabras relacionadas con el proyecto y documenta y programa en base a dicho glosario. Mantén y actualiza el glosario.</p>
+<p><strong>Tip 55: Don't think outside the box - find the box.</strong> Identifica todas las restricciones reales del problema, no solo las indicadas.</p>
+<p><strong>Tip 56: Start when you are ready.</strong> Tu experiencia te puede advertir de que algo no está bien diseñado antes de empezar: escúchala.</p>
+<p><strong>Tip 57: Some things are better done than described.</strong> Al desarrollar, puedes localizar cosas que pueden ser generalizadas, algoritmos o formas más óptimas de hacer algo, o problemas y limitaciones no documentadas. Es mejor empezar a desarrollar que perder demasiado tiempo buscando la especificación perfecta.</p>
+<p><strong>Tip 58:? Don't be a slave to formal methods.</strong> Antes de aplicar una nueva tecnología o metodología, ponla en el contexto del proyecto para analizar sus ventajas y desventajas y su aplicación a las diferentes habilidades del equipo.</p>
+<p><strong>Tip 59: Expensive tools do not produce better designs.</strong> Usa herramientas puede ayudarte a diseñar un programa, pero no bases tu programa en ellas. El coste de las herramientas no quita que los resultados estén mal detallados o contengan errores.</p>
+<p><strong>Tip 60: Organize around functionality, not job functions.</strong> Los diferentes trabajos realizados dentro de un proyecto (diseñadores, programadores, testers, producto...) no tienen que trabajar de forma aislada. Es mejor crear equipos por funcionalidades que por tareas.</p>
+<p><strong>Tip 61: Don't use manual procedures.</strong> Automatiza todas las tareas manuales para evitar problemas de interpretación o saltos de pasos. Usa <em>shell scripts</em> o constantes.</p>
+<p><strong>Tip 62: Test early, test often, test automatically.</strong> Empieza haciendo test desde el principio, y testea todo el código producido. Crea test que se puedan ejecutar automáticamente (desde la consola, con cada commit, por la noche...).</p>
+<p><strong>Tip 63:? Coding ain't done until all test runs.</strong> Ejecuta siempre los test antes de decir que algo está terminado y comprueba que todo tiene un test. Testea de forma unitaria, la integración de los componentes, la validación y verificación de los usuarios (no automatizable), los recursos necesarios para su ejecución así como errores y recuperación, la eficiencia y la usabilidad.</p>
+<p><strong>Tip 64: Use saboteurs to test your testing.</strong> Comprueba que los test que has escrito fallan al romper intencionadamente el código, verificando que el test funciona correctamente. Puedes designar un saboteador que desconozca los test para introducir bugs y comprobar el resultado.</p>
+<p><strong>Tip 65: Test state coverage, not code coverage.</strong> La cobertura del código en líneas es una métrica útil, pero es mas importante asegurarse de que se están testeando los estados suficientes. Un test puede pasar por un fragmento de código y no testear todos los estados necesarios del mismo.</p>
+<p><strong>Tip 66: Find bugs once.</strong> Si encuentras un bug, crea un test para que no se vuelva a repetir.</p>
+<p><strong>Tip 67: Treat English as just another programming language.</strong> Aplica todos los consejos aprendidos a tu documentación (DRY, metadata, generación automática...).</p>
+<p><strong>Tip 68: Build documentation in, don't bolt it on.</strong> Hay dos tipos de documentación: interna (código, diseño, test...) y externa (manuales de usuario...). La segunda suele estar desactualizada y no documenta todo lo que puede pasar.</p>
+<p><strong>Tip 69: Gently exceed your users expectations.</strong> Intenta no sobrepasar en exceso las expectativas de los usuarios, entregando un poco más de lo prometido. Nunca te quedes por debajo.</p>
+<p><strong>Tip 70: Sign your work.</strong> Deberías estar orgulloso de tu trabajo cómo para poder firmarlo.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://darkrodry.github.io/tag/libros.html">libros</a>
+      <a href="https://darkrodry.github.io/tag/tech.html">tech</a>
+      <a href="https://darkrodry.github.io/tag/pragmatic-programmer.html">pragmatic programmer</a>
+    </p>
+  </div>
+
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'darkrodry-github-blog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Por favor, habilita JavaScript para ver los comentarios.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Construido con <a href="http://getpelican.com" target="_blank">Pelican</a> usando el tema <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> 
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " El blog de DarkRodry ",
+  "url" : "https://darkrodry.github.io",
+  "image": "/images/avatar.jpg",
+  "description": "Aventuras y desventuras de un programador"
+}
+</script>
+
+  
+</body>
+</html>

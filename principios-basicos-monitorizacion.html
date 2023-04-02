@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://darkrodry.github.io/theme/pygments/github.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://darkrodry.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="El blog de DarkRodry Atom">
+
+
+
+  
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+ 
+
+<meta name="author" content="DarkRodry" />
+<meta name="description" content="Actualmente ando investigando y mejorando mis conocimientos sobre monitorización. Más allá de una forma de medir el estado de tu sistema, la monitorización permite obtener datos de uso, fallos, estadísticas y otras métricas relacionadas con cómo utilizan los usuarios todo tu trabajo. Todo esto puede ayudarte a la hora de tomar decisiones, ya que con toda esta información puedes saber qué acciones pueden resultar confusas para el usuario, cuáles son los errores que se producen más a menudo y ayudar a simplificar el uso o analizar la aceptación de nuevas funcionalidades. Al final de todo, ¿qué hay mas satisfactorio en nuestro trabajo que ver cómo los usuarios utilizan y están felices con lo que hacemos?" />
+<meta name="keywords" content="libros, tech, monitoring, practical monitoring">
+
+
+  <meta property="og:site_name" content="El blog de DarkRodry"/>
+  <meta property="og:title" content="Principios básicos para monitorización"/>
+  <meta property="og:description" content="Actualmente ando investigando y mejorando mis conocimientos sobre monitorización. Más allá de una forma de medir el estado de tu sistema, la monitorización permite obtener datos de uso, fallos, estadísticas y otras métricas relacionadas con cómo utilizan los usuarios todo tu trabajo. Todo esto puede ayudarte a la hora de tomar decisiones, ya que con toda esta información puedes saber qué acciones pueden resultar confusas para el usuario, cuáles son los errores que se producen más a menudo y ayudar a simplificar el uso o analizar la aceptación de nuevas funcionalidades. Al final de todo, ¿qué hay mas satisfactorio en nuestro trabajo que ver cómo los usuarios utilizan y están felices con lo que hacemos?"/>
+  <meta property="og:locale" content="es_ES"/>
+  <meta property="og:url" content="https://darkrodry.github.io/principios-basicos-monitorizacion.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2022-06-12 00:00:00+02:00"/>
+  <meta property="article:modified_time" content="2022-07-10 00:00:00+02:00"/>
+  <meta property="article:author" content="https://darkrodry.github.io/author/darkrodry.html">
+  <meta property="article:section" content="Monitoring"/>
+  <meta property="article:tag" content="libros"/>
+  <meta property="article:tag" content="tech"/>
+  <meta property="article:tag" content="monitoring"/>
+  <meta property="article:tag" content="practical monitoring"/>
+  <meta property="og:image" content="/images/avatar.jpg">
+
+  <title>El blog de DarkRodry &ndash; Principios básicos para monitorización</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://darkrodry.github.io/">
+        <img src="/images/avatar.jpg" alt="Rodrigo de Frutos" title="Rodrigo de Frutos">
+      </a>
+
+      <h1>
+        <a href="https://darkrodry.github.io/">Rodrigo de Frutos</a>
+      </h1>
+
+<p>Miscelaneous Developer</p>
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://darkrodry.github.io/pages/sobre-mi.html">
+                  Sobre mí
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://darkrodry.github.io/pages/charlas.html">
+                  Charlas
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://es.linkedin.com/in/rodrigodefrutos" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/darkrodry" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/DarkRodry" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://darkrodry.github.io/">Inicio</a>
+
+      <a href="/archives.html">Archivo</a>
+      <a href="/categories.html">Categorias</a>
+
+      <a href="https://darkrodry.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="principios-basicos-monitorizacion">Principios básicos para monitorización</h1>
+    <p>
+      Publicado el 12 de June de 2022 en <a href="https://darkrodry.github.io/category/monitoring.html">Monitoring</a>
+
+        &#8226; 6 min de lectura
+    </p>
+  </header>
+
+
+  <div>
+    <p>Actualmente ando investigando y mejorando mis conocimientos sobre monitorización. Más allá de una forma de medir el estado de tu sistema, la monitorización permite obtener datos de uso, fallos, estadísticas y otras métricas relacionadas con cómo utilizan los usuarios todo tu trabajo. Todo esto puede ayudarte a la hora de tomar decisiones, ya que con toda esta información puedes saber qué acciones pueden resultar confusas para el usuario, cuáles son los errores que se producen más a menudo y ayudar a simplificar el uso o analizar la aceptación de nuevas funcionalidades. Al final de todo, ¿qué hay mas satisfactorio en nuestro trabajo que ver cómo los usuarios utilizan y están felices con lo que hacemos?</p>
+<p>En este post (y alguno más que iré subiendo) colgaré mis notas sobre el libro <a href="https://www.practicalmonitoring.com/">Practical Monitoring</a> de Mike Julian. Es un libro que me está gustando bastante, ya que da una buena introducción al tema agnóstica de cualquier herramienta.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto; width: 30%" src="images/practical-monitoring.jpg" alt="practical monitoring cover"></p>
+<h3>Anti patrones</h3>
+<p>En esta sección se agrupan diferentes patrones a evitar a la hora de trabajar en tu sistema de monitorización.</p>
+<h5>Obsesión con las herramientas</h5>
+<p>A la hora de monitorizar, no te obsesiones con las herramientas. Evita crear dependencias entre tu sistema de monitorización y la herramienta (o herramientas) utilizadas. Tampoco debes limitarte a una sola herramienta, ya que no existe una que sea perfecta y te permita controlar todo lo que necesitas. Tampoco de te dejes llevar por modas o por "noseque compañía famosa utiliza tal herramienta". Lo mejor que puedes hacer es buscar la o las herramientas necesarias y, solo en caso de ser necesario, implementar tu propia solución.</p>
+<h5>Considerar la monitorización como un trabajo</h5>
+<p>No hay que considerar la monitorización como responsabilidad de uno o mas miembros del equipo: es responsabilidad de todos. Como desarrollador, tienes que tener el conocimiento y la capacidad para trabajar con la monitorización necesaria para todos tus desarrollos. Al trabajar con una parte concreta de tu aplicación, tienes el contexto de que hay qué y dónde monitorizar, por lo que no hay nadie mejor para implementarlo.</p>
+<h5>Monitorizar por monitorizar</h5>
+<p>Es importante no tener métricas por tenerlas. Suele ser muy común controlar el uso de CPU, el porcentaje de disco, tener alertas que ignoramos... En este caso, deberías replantearte tus métricas planteando que significa que tu sistema funcione y empezar a controlar eso: un endpoint funcionando, una respuesta predeterminada, una web cargando...</p>
+<h5>Monitorizar como soporte</h5>
+<p>Monitorizar no arregla cosas. Está muy bien utilizar la monitorización para notificar errores, pero a parte de arreglar los daños causados por el error es mas importante reparar el centro del problema y evitar que el fallo se vuelva a repetir.</p>
+<h5>Configuración manual</h5>
+<p>La monitorización debería ser automática. Al agregar una nueva métrica, nuestro sistema debería detectarla automáticamente. Además deberíamos ser capaces de automatizar los procesos para solucionar problemas detectados por nuestras métricas (<em>runbooks</em>) y no solamente generar alertas.</p>
+<h3>Patrones</h3>
+<p>Una vez vistos los patrones a evitar, toca ver cuales son las buenas prácticas para monitorizar. Muchos de estos patrones son el contrapunto de los anti patrones vistos en la sección anterior, pero con más información sobre cómo implementarlos.</p>
+<h5>Compón métricas para hacer tu plataforma</h5>
+<p>Usa múltiples herramientas de monitorización e intenta acoplarlas entre ellas sin forzar para crear tu plataforma de monitorización. Una plataforma de monitorización se compone de varios sistemas para diferentes tareas:</p>
+<ul>
+<li>obtención de datos. Para recibir datos, puede hacer push (el sistema las recibe de los diferentes nodos) o pull (el sistema las solicita a los nodos). Los datos que recibe son métricas o logs.</li>
+<li>almacenamiento de datos.</li>
+<li>visualización de los datos recopilados.</li>
+<li>generar analíticas y reportes</li>
+<li>enviar alertas</li>
+</ul>
+<h5>Monitorizar desde la perspectiva del usuario</h5>
+<p>Si tienes que empezar a monitorizar algo, empieza a hacerlo desde la perspectiva del usuario. Esto permite tener una visibilidad mucho mayor sobre el uso y el estado de tu sistema. Una de las métricas mas sencillas y efectivas es analizar el código HTTP y la latencia de tus servicios.</p>
+<h5>Comprar mejor que construir</h5>
+<p>No tener que montar tu propio sistema de monitorización es más barato de lo que parece. La inversión necesaria en conocimientos, personal y el tiempo dedicado a esta tarea en vez de al producto principal de tu empresa compensa de sobra el gasto en cualquier SaaS.</p>
+<h5>Mejora continua</h5>
+<p>Es importante seguir trabajando día a día en tus métricas y en tu sistema de monitorización. Lo que es útil y te permite realizar seguimiento de tu sistema en este instante puede dejar de serlo la próxima semana.</p>
+<h3>Gestión de incidencias</h3>
+<p>Una vez tienes diseñado tu sistema de monitorización, el siguiente paso es agregar alertas en caso de que algo no funcione como se espera y cómo actuar en ese escenario.</p>
+<p>Sobre los tipos de alerta, se pueden diferencias dos alertas a generar: alertas que requieren una acción inmediata (no funciona el sistema, la base de datos es inaccesible) o alertas para informar de que algo no ha funcionado pero no requieren acción inmediata (un cron no se ha ejecutado). En base a esto, podemos ver diferentes tipos de alertas: las que requieren acción inmediata deberían generar una llamada o algún tipo de mensaje que requiera respuesta inmediata, las segundas algún tipo de alerta asíncrona (mensaje en un canal de slack, intenta evitar emails) y en caso de no requerir ni siquiera acción solamente almacenarla dentro de tus ficheros de logs, algo que debería pasar en todos los casos.</p>
+<p>Intenta generar <em>runbooks</em>, documentos que permitan realizar un diagnóstico y aplicar una solución a cualquier persona independientemente de su conocimiento sobre esa parte del sistema: qué hace el servicio afectado, quién es el responsable, sus dependencias, un resumen de su diseño, cuáles son sus métricas o que alertas tiene implementadas. Evita abusar de este tipo de documentos para solucionar problemas, si un problema se puede solucionar con una serie de comandos... ¿no es mejor implementar esa solución dentro de tu sistema que dejarla dentro de un documento?</p>
+<p>A la hora de definir los umbrales para las alertas, evita tener valores numéricos arbitrarios. Define tus valores en base a cambios drásticos, percentiles o comparaciones con periodos pasados para evitar lanzar alertas que realmente no lo son. También es importante evitar alarmas "ruidosas", que se envían con frecuencia. En caso de tener alguna alarma que no requieran que nadie actúe, que se hayan recibido múltiples veces en el último mes y se hayan ignorado o que la acción llevada a cabo pueda ser automatizada, borra dicha alerta lo más pronto posible. Generar muchas alertas falsas suele derivar en fatiga y en que tu equipo termine ignorando estas notificaciones, incluso cuando estas son de verdad.</p>
+<p>En muchos proyectos es necesario tener un equipo <em>on-call</em>, que tenga que estar disponible fuera de horario laboral por si hay algún problema (remuneradas siempre, por supuesto). En estos casos, es muy importante el punto anterior: evitar lanzar alertas que realmente no lo son, ya que a nadie le gusta que le despierten a las 3 de la mañana con una falsa alarma. De igual forma es importante que tus alertas no sean excesivas, ya que estar constantemente apagando fuegos también es agotador. Es aconsejable tener un sistema de gestión de incidencias para facilitar el trabajo: permite hacer seguimiento, escalar a otros departamentos en caso de ser necesario y documentar las acciones realizadas. Cualquier intervención debería concluir con un postmortem en el que se discuta el problema y se plantee una solución para evitar futuras intervenciones. En estos equipos es importante tener una buena rotación, con mucho tiempo entre guardia y guardia para poder descansar. También es importante compensar a la gente que está de guardia, tanto económicamente (con bonus extra en caso de realizar intervenciones) cómo con días de descanso (siempre viene bien descansar después de varios días pendiente del teléfono por si pasa algo).</p>
+<h3>La importancia de la estadística</h3>
+<p>Como último punto, es importante destacar la importancia de la estadística a la hora de tener buenas métricas. Ten siempre en mente la media, mediana, temporalidad, cuartiles/percentiles y desviación estándar a la hora de calcular métricas y alertas para tener información mas relevante.</p>
+<p>En el <a href="tacticas-monitorizacion">siguiente artículo</a> nos centraremos en las diferentes partes del sistema a monitorizar.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://darkrodry.github.io/tag/libros.html">libros</a>
+      <a href="https://darkrodry.github.io/tag/tech.html">tech</a>
+      <a href="https://darkrodry.github.io/tag/monitoring.html">monitoring</a>
+      <a href="https://darkrodry.github.io/tag/practical-monitoring.html">practical monitoring</a>
+    </p>
+  </div>
+
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'darkrodry-github-blog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Por favor, habilita JavaScript para ver los comentarios.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Construido con <a href="http://getpelican.com" target="_blank">Pelican</a> usando el tema <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> 
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " El blog de DarkRodry ",
+  "url" : "https://darkrodry.github.io",
+  "image": "/images/avatar.jpg",
+  "description": "Aventuras y desventuras de un programador"
+}
+</script>
+
+  
+</body>
+</html>

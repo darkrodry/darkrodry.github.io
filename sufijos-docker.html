@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://darkrodry.github.io/theme/pygments/github.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://darkrodry.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="El blog de DarkRodry Atom">
+
+
+
+  
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+ 
+
+<meta name="author" content="DarkRodry" />
+<meta name="description" content="El otro día en el trabajo estuve mirando con un compañero para actualizar la imagen de docker que estábamos ejecutando en el pipeline y empezamos a ver imágenes con coletillas de buster, alpine o bullseye, momento en el que nos empezamos a mirar con cara de poker sin saber muy bien cuál elegir. En este artículo, a modo de chuleta, explico los nombres más comunes que puedes encontrar en los contenedores de Dockerhub." />
+<meta name="keywords" content="docker, tech">
+
+
+  <meta property="og:site_name" content="El blog de DarkRodry"/>
+  <meta property="og:title" content="Sufijos en tags de Docker"/>
+  <meta property="og:description" content="El otro día en el trabajo estuve mirando con un compañero para actualizar la imagen de docker que estábamos ejecutando en el pipeline y empezamos a ver imágenes con coletillas de buster, alpine o bullseye, momento en el que nos empezamos a mirar con cara de poker sin saber muy bien cuál elegir. En este artículo, a modo de chuleta, explico los nombres más comunes que puedes encontrar en los contenedores de Dockerhub."/>
+  <meta property="og:locale" content="es_ES"/>
+  <meta property="og:url" content="https://darkrodry.github.io/sufijos-docker.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2022-07-29 00:00:00+02:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="https://darkrodry.github.io/author/darkrodry.html">
+  <meta property="article:section" content="DevOps"/>
+  <meta property="article:tag" content="docker"/>
+  <meta property="article:tag" content="tech"/>
+  <meta property="og:image" content="/images/avatar.jpg">
+
+  <title>El blog de DarkRodry &ndash; Sufijos en tags de Docker</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://darkrodry.github.io/">
+        <img src="/images/avatar.jpg" alt="Rodrigo de Frutos" title="Rodrigo de Frutos">
+      </a>
+
+      <h1>
+        <a href="https://darkrodry.github.io/">Rodrigo de Frutos</a>
+      </h1>
+
+<p>Miscelaneous Developer</p>
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://darkrodry.github.io/pages/sobre-mi.html">
+                  Sobre mí
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://darkrodry.github.io/pages/charlas.html">
+                  Charlas
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://es.linkedin.com/in/rodrigodefrutos" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/darkrodry" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/DarkRodry" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://darkrodry.github.io/">Inicio</a>
+
+      <a href="/archives.html">Archivo</a>
+      <a href="/categories.html">Categorias</a>
+
+      <a href="https://darkrodry.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="sufijos-docker">Sufijos en tags de Docker</h1>
+    <p>
+      Publicado el 29 de July de 2022 en <a href="https://darkrodry.github.io/category/devops.html">DevOps</a>
+
+        &#8226; 2 min de lectura
+    </p>
+  </header>
+
+
+  <div>
+    <p>El otro día en el trabajo estuve mirando con un compañero para actualizar la imagen de docker que estábamos ejecutando en el pipeline y empezamos a ver imágenes con coletillas de <em>buster</em>, <em>alpine</em> o <em>bullseye</em>, momento en el que nos empezamos a mirar con cara de poker sin saber muy bien cuál elegir. En este artículo, a modo de chuleta, explico los nombres más comunes que puedes encontrar en los contenedores de Dockerhub.</p>
+<p>A modo de ejemplo he elegido la imagen de <a href="https://hub.docker.com/_/node/">node 16</a> (actualmente está la 18) para detallar todos estos sufijos.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto; width: 1000%" src="images/docker-node-tags.png" alt="docker node tags example"></p>
+<h3>Imagen por defecto</h3>
+<p>La imagen oficial, sin nada extra, se puede bajar como <code>node:16</code> (o <code>node:16.16.0</code> para bajar una versión concreta).</p>
+<h3>alpine</h3>
+<p><a href="https://alpinelinux.org/">Alpine</a> es una distribución de Linux creada específicamente para usarse en contenedores. Es una distribucióncreada con la intención de ser segura y ligera, lo cual puede ser bueno si el tamaño es un requisito pero son imágenes que carecen de muchas utilidades de Linux como <code>bash</code> o <code>git</code>. En el caso de node, estas imágenes están etiquetadas como <code>node:16.16.0-alpine</code>, existiendo variantes para versiones de esta distribución (<code>alpine3.15</code> y <code>alpine3.16</code>).</p>
+<h3>Debian releases</h3>
+<p>Otra distribución de Linux que se usa para contenedores es <a href="https://www.debian.org/">Debian</a>, con sus <a href="https://www.debian.org/releases/">diferentes releases</a>. Estas releases (<em>bullseye</em>, <em>buster</em> o <em>strech</em> son las tres mas recientes ahora mismo) indican la versión de Debian en la que se basa el contenedor. Para node las puedes bajar como <code>node:16.16.0-bullseye</code> o <code>node:16.16.0-buster</code> en función de lo que busques.</p>
+<h3>slim</h3>
+<p>Estas imágenes, normalmente a partir de releases de Debian, son imágenes que contienen los paquetes básicos de la distribución de Linux para que funcione el contenedor. Al igual que con alpine, estas imagenes son solo recomendables si el tamaño es un requisito. La etiqueta para este caso es <code>node:16.16.0-slim</code> para la slim por defecto o <code>node:16.16.0-bullseye-slim</code> si quieres especificar una versión concreta.</p>
+<h3>windowsservercore</h3>
+<p>En el caso de necesitar imágenes con Windows, algunos contenedores disponen del sufijo <code>-windowsservercore</code> que basa la imagen en <a href="https://hub.docker.com/_/microsoft-windows-servercore">Windows Server Core</a>. En el caso de node no hay nada basado en Windows, ya que no tiene la necesidad, pero podemos encontrar ejemplos de esto en <a href="https://hub.docker.com/_/golang">golang</a> con el tag <code>golang:1.18.4-windowsservercore</code>.</p>
+<h3>¿Cuál elegir?</h3>
+<p>Si miras el apartado final de la página de node en Dockerhub (Image Variants), y en general en todas las páginas de imágenes importante, suelen recomendar que imagen usar. Las recomendaciones suelen ser usar la imagen por defecto si no tienes problemas de tamaño y la versión slim en caso de que el tamaño sea un problema. Piensa que una de las ventajas de Docker es que una vez descargado un contenedor, las siguientes descargar son "gratis" ya que la imagen estará cacheada.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://darkrodry.github.io/tag/docker.html">docker</a>
+      <a href="https://darkrodry.github.io/tag/tech.html">tech</a>
+    </p>
+  </div>
+
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'darkrodry-github-blog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Por favor, habilita JavaScript para ver los comentarios.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Construido con <a href="http://getpelican.com" target="_blank">Pelican</a> usando el tema <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> 
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " El blog de DarkRodry ",
+  "url" : "https://darkrodry.github.io",
+  "image": "/images/avatar.jpg",
+  "description": "Aventuras y desventuras de un programador"
+}
+</script>
+
+  
+</body>
+</html>

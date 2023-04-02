@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://darkrodry.github.io/theme/pygments/github.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://darkrodry.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://darkrodry.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="El blog de DarkRodry Atom">
+
+
+
+  
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+ 
+
+<meta name="author" content="DarkRodry" />
+<meta name="description" content="A la hora de testear es necesario falsear implementaciones de dependencias en nuestro código a testear. Para ello usaremos test doubles, que nos permitirán sustituir nuestras implementaciones por algo falso que tendremos bajo nuestro control." />
+<meta name="keywords" content="testing, tech">
+
+
+  <meta property="og:site_name" content="El blog de DarkRodry"/>
+  <meta property="og:title" content="Testing doubles"/>
+  <meta property="og:description" content="A la hora de testear es necesario falsear implementaciones de dependencias en nuestro código a testear. Para ello usaremos test doubles, que nos permitirán sustituir nuestras implementaciones por algo falso que tendremos bajo nuestro control."/>
+  <meta property="og:locale" content="es_ES"/>
+  <meta property="og:url" content="https://darkrodry.github.io/test-doubles.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2022-04-12 00:00:00+02:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="https://darkrodry.github.io/author/darkrodry.html">
+  <meta property="article:section" content="Testing"/>
+  <meta property="article:tag" content="testing"/>
+  <meta property="article:tag" content="tech"/>
+  <meta property="og:image" content="/images/avatar.jpg">
+
+  <title>El blog de DarkRodry &ndash; Testing doubles</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://darkrodry.github.io/">
+        <img src="/images/avatar.jpg" alt="Rodrigo de Frutos" title="Rodrigo de Frutos">
+      </a>
+
+      <h1>
+        <a href="https://darkrodry.github.io/">Rodrigo de Frutos</a>
+      </h1>
+
+<p>Miscelaneous Developer</p>
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://darkrodry.github.io/pages/sobre-mi.html">
+                  Sobre mí
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://darkrodry.github.io/pages/charlas.html">
+                  Charlas
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://es.linkedin.com/in/rodrigodefrutos" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/darkrodry" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/DarkRodry" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://darkrodry.github.io/">Inicio</a>
+
+      <a href="/archives.html">Archivo</a>
+      <a href="/categories.html">Categorias</a>
+
+      <a href="https://darkrodry.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="test-doubles">Testing doubles</h1>
+    <p>
+      Publicado el 12 de April de 2022 en <a href="https://darkrodry.github.io/category/testing.html">Testing</a>
+
+        &#8226; 2 min de lectura
+    </p>
+  </header>
+
+
+  <div>
+    <p>A la hora de testear es necesario falsear implementaciones de dependencias en nuestro código a testear. Para ello usaremos <strong><em>test doubles</em></strong>, que nos permitirán sustituir nuestras implementaciones por algo falso que tendremos bajo nuestro control. Existen varios tipos de <em>test doubles</em>:</p>
+<ul>
+<li><strong><em>fake</em></strong>: implementación funcional pero con valores generados aleatoriamente. Los <em>fake</em> se suelen generar utilizando un builder especial conocido como <em>objectMother</em>, que da valores aleatorios a todas las propiedades salvo a aquellas que queramos especificar para nuestro test.</li>
+<li><strong><em>dummy</em></strong>: implementa la interfaz pero todos sus métodos no tienen implementación. Suelen ser elementos que necesita nuestro test pero que no va a utilizar.</li>
+<li><strong><em>stub</em></strong>: es una especie de dummy pero en el que todos los valores están predefinidos, sin lógica. Se usan para falsear datos que necesita nuestro test pero de los cuales no nos importa el valor.</li>
+<li><strong><em>spy</em></strong>: permite observar si ha habido alguna interacción o llamada a la implementación, pero no modela la implementación (solo controla la entrada). Muy útiles para verificar que las llamadas a dependencias de nuestro test se hacen como esperamos.</li>
+<li><strong><em>mock</em></strong>: implementación pensada para validar los argumentos y, a diferencia de <em>spy</em>, modelar una implementación de salida. Se usa cuando necesitamos controlar la respuesta de nuestras dependencias externas.</li>
+</ul>
+<p>Al final, a la hora de hacer los test acostumbramos a llamar a todos estos doubles de la misma forma (incluso alguna librería mezcla los nombres). Lo importante es saber que tenemos todas estas opciones en nuestra mano y saber cómo y cuándo utilizarlas para simplificar nuestros test.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://darkrodry.github.io/tag/testing.html">testing</a>
+      <a href="https://darkrodry.github.io/tag/tech.html">tech</a>
+    </p>
+  </div>
+
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'darkrodry-github-blog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Por favor, habilita JavaScript para ver los comentarios.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Construido con <a href="http://getpelican.com" target="_blank">Pelican</a> usando el tema <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> 
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " El blog de DarkRodry ",
+  "url" : "https://darkrodry.github.io",
+  "image": "/images/avatar.jpg",
+  "description": "Aventuras y desventuras de un programador"
+}
+</script>
+
+  
+</body>
+</html>
